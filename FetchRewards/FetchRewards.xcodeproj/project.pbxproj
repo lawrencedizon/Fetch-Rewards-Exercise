@@ -16,6 +16,8 @@
 		90BEB1CD266FE7A7006ECD93 /* FetchRewardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1CC266FE7A7006ECD93 /* FetchRewardsTests.swift */; };
 		90BEB1D8266FE7A7006ECD93 /* FetchRewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1D7266FE7A7006ECD93 /* FetchRewardsUITests.swift */; };
 		90BEB1E9266FE950006ECD93 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1E8266FE950006ECD93 /* CustomTableViewCell.swift */; };
+		90BEB1EB26715CE5006ECD93 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1EA26715CE5006ECD93 /* APIResponse.swift */; };
+		90BEB1ED26715D02006ECD93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1EC26715D02006ECD93 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		90BEB1D7266FE7A7006ECD93 /* FetchRewardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewardsUITests.swift; sourceTree = "<group>"; };
 		90BEB1D9266FE7A7006ECD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90BEB1E8266FE950006ECD93 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		90BEB1EA26715CE5006ECD93 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		90BEB1EC26715D02006ECD93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 		90BEB1E5266FE8BA006ECD93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90BEB1EA26715CE5006ECD93 /* APIResponse.swift */,
+				90BEB1EC26715D02006ECD93 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BEB1EB26715CE5006ECD93 /* APIResponse.swift in Sources */,
 				90BEB1B7266FE7A4006ECD93 /* ViewController.swift in Sources */,
 				90BEB1B3266FE7A4006ECD93 /* AppDelegate.swift in Sources */,
 				90BEB1E9266FE950006ECD93 /* CustomTableViewCell.swift in Sources */,
+				90BEB1ED26715D02006ECD93 /* Constants.swift in Sources */,
 				90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */,
 				90BEB1BD266FE7A4006ECD93 /* FetchRewards.xcdatamodeld in Sources */,
 			);
