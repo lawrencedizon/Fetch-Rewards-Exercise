@@ -9,14 +9,21 @@ import UIKit
 
 ///ViewController - allows the user to search for events and display the results into a TableView
 class ViewController: UIViewController {
-    var testData = [String]()
+    var testData = ["Los Angeles Rams at Tampa Bay Buccaneers",
+                    "Atlanta Falcons at New Orleans Saints",
+                    "New Mexico Lobos at Utah State Aggies Football",
+                    "Washington Football Team at Dallas Cowboys"]
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
             searchBar.delegate = self
             searchBar.searchBarStyle = UISearchBar.Style.minimal
             searchBar.placeholder = "Search events"
+        if #available(iOS 13.0, *) {
             searchBar.searchTextField.defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        } else {
+            // Fallback on earlier versions
+        }
             searchBar.showsCancelButton = true
         return searchBar
     }()
@@ -47,13 +54,11 @@ class ViewController: UIViewController {
 //MARK: - ViewController Lifecycle
        override func loadView() {
         super.loadView()
-        
-        for num in 0...99 {
-            testData.append("Data \(num)")
-        }
         setupUserInterface()
+        
         print("View controller loaded")
     }
+    
     
 //MARK: - User Interface
     private func setupUserInterface(){
@@ -73,8 +78,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-        cell.textLabel?.text = testData[indexPath.row]
+        cell.eventTitleLabel.text = testData[indexPath.row]
+        cell.eventImageView.image = UIImage(named: "testImage.jpg")
+        cell.eventLocationLabel.text = "Tampa, FL"
+        cell.eventDateLabel.text = "Tuesday, 24 Nov 2020"
+        cell.eventTimeLabel.text = "01:15 AM"
         return cell
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
