@@ -7,6 +7,17 @@
 
 import Foundation
 
-struct APIResponse: Codable{
-    
+struct EventsAPIResponse: Codable{
+    let events: [EventInfo]
+}
+
+struct EventInfo: Codable {
+    let venue: [VenueInfo]
+}
+
+struct VenueInfo: Codable {
+    let name:  String?
+    let city:  String?
+    let state: String?
+    let datetime_utc: String?
 }
