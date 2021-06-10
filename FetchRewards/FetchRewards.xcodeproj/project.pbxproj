@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		908429FD267184BB0061485E /* SeatGeekDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908429FC267184BB0061485E /* SeatGeekDataTests.swift */; };
+		908429FF267187840061485E /* SeatGeekEventsSampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 908429FE267187840061485E /* SeatGeekEventsSampleResponse.json */; };
 		90BEB1B3266FE7A4006ECD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */; };
 		90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */; };
 		90BEB1B7266FE7A4006ECD93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B6266FE7A4006ECD93 /* ViewController.swift */; };
 		90BEB1BD266FE7A4006ECD93 /* FetchRewards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1BB266FE7A4006ECD93 /* FetchRewards.xcdatamodeld */; };
 		90BEB1BF266FE7A7006ECD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */; };
 		90BEB1C2266FE7A7006ECD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */; };
-		90BEB1CD266FE7A7006ECD93 /* FetchRewardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1CC266FE7A7006ECD93 /* FetchRewardsTests.swift */; };
-		90BEB1D8266FE7A7006ECD93 /* FetchRewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1D7266FE7A7006ECD93 /* FetchRewardsUITests.swift */; };
 		90BEB1E9266FE950006ECD93 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1E8266FE950006ECD93 /* CustomTableViewCell.swift */; };
 		90BEB1EB26715CE5006ECD93 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1EA26715CE5006ECD93 /* APIResponse.swift */; };
 		90BEB1ED26715D02006ECD93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1EC26715D02006ECD93 /* Constants.swift */; };
@@ -22,14 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		90BEB1C9266FE7A7006ECD93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90BEB1A7266FE7A3006ECD93 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90BEB1AE266FE7A4006ECD93;
-			remoteInfo = FetchRewards;
-		};
-		90BEB1D4266FE7A7006ECD93 /* PBXContainerItemProxy */ = {
+		908429F7267184030061485E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 90BEB1A7266FE7A3006ECD93 /* Project object */;
 			proxyType = 1;
@@ -39,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		908429F2267184030061485E /* FetchRewardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		908429F6267184030061485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908429FC267184BB0061485E /* SeatGeekDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekDataTests.swift; sourceTree = "<group>"; };
+		908429FE267187840061485E /* SeatGeekEventsSampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeatGeekEventsSampleResponse.json; sourceTree = "<group>"; };
 		90BEB1AF266FE7A4006ECD93 /* FetchRewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRewards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +44,6 @@
 		90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90BEB1C1266FE7A7006ECD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90BEB1C3266FE7A7006ECD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90BEB1C8266FE7A7006ECD93 /* FetchRewardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90BEB1CC266FE7A7006ECD93 /* FetchRewardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewardsTests.swift; sourceTree = "<group>"; };
-		90BEB1CE266FE7A7006ECD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90BEB1D3266FE7A7006ECD93 /* FetchRewardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90BEB1D7266FE7A7006ECD93 /* FetchRewardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewardsUITests.swift; sourceTree = "<group>"; };
-		90BEB1D9266FE7A7006ECD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90BEB1E8266FE950006ECD93 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		90BEB1EA26715CE5006ECD93 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		90BEB1EC26715D02006ECD93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -60,21 +51,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		908429EF267184030061485E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BEB1AC266FE7A4006ECD93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90BEB1C5266FE7A7006ECD93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90BEB1D0266FE7A7006ECD93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,12 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		908429F3267184030061485E /* FetchRewardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				908429F6267184030061485E /* Info.plist */,
+				908429FC267184BB0061485E /* SeatGeekDataTests.swift */,
+				908429FE267187840061485E /* SeatGeekEventsSampleResponse.json */,
+			);
+			path = FetchRewardsTests;
+			sourceTree = "<group>";
+		};
 		90BEB1A6266FE7A3006ECD93 = {
 			isa = PBXGroup;
 			children = (
 				90BEB1B1266FE7A4006ECD93 /* FetchRewards */,
-				90BEB1CB266FE7A7006ECD93 /* FetchRewardsTests */,
-				90BEB1D6266FE7A7006ECD93 /* FetchRewardsUITests */,
+				908429F3267184030061485E /* FetchRewardsTests */,
 				90BEB1B0266FE7A4006ECD93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				90BEB1AF266FE7A4006ECD93 /* FetchRewards.app */,
-				90BEB1C8266FE7A7006ECD93 /* FetchRewardsTests.xctest */,
-				90BEB1D3266FE7A7006ECD93 /* FetchRewardsUITests.xctest */,
+				908429F2267184030061485E /* FetchRewardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,24 +111,6 @@
 				90BEB1BB266FE7A4006ECD93 /* FetchRewards.xcdatamodeld */,
 			);
 			path = FetchRewards;
-			sourceTree = "<group>";
-		};
-		90BEB1CB266FE7A7006ECD93 /* FetchRewardsTests */ = {
-			isa = PBXGroup;
-			children = (
-				90BEB1CC266FE7A7006ECD93 /* FetchRewardsTests.swift */,
-				90BEB1CE266FE7A7006ECD93 /* Info.plist */,
-			);
-			path = FetchRewardsTests;
-			sourceTree = "<group>";
-		};
-		90BEB1D6266FE7A7006ECD93 /* FetchRewardsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				90BEB1D7266FE7A7006ECD93 /* FetchRewardsUITests.swift */,
-				90BEB1D9266FE7A7006ECD93 /* Info.plist */,
-			);
-			path = FetchRewardsUITests;
 			sourceTree = "<group>";
 		};
 		90BEB1E5266FE8BA006ECD93 /* Model */ = {
@@ -175,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		908429F1267184030061485E /* FetchRewardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 908429F9267184030061485E /* Build configuration list for PBXNativeTarget "FetchRewardsTests" */;
+			buildPhases = (
+				908429EE267184030061485E /* Sources */,
+				908429EF267184030061485E /* Frameworks */,
+				908429F0267184030061485E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				908429F8267184030061485E /* PBXTargetDependency */,
+			);
+			name = FetchRewardsTests;
+			productName = FetchRewardsTests;
+			productReference = 908429F2267184030061485E /* FetchRewardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		90BEB1AE266FE7A4006ECD93 /* FetchRewards */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90BEB1DC266FE7A7006ECD93 /* Build configuration list for PBXNativeTarget "FetchRewards" */;
@@ -192,42 +184,6 @@
 			productReference = 90BEB1AF266FE7A4006ECD93 /* FetchRewards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90BEB1C7266FE7A7006ECD93 /* FetchRewardsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90BEB1DF266FE7A7006ECD93 /* Build configuration list for PBXNativeTarget "FetchRewardsTests" */;
-			buildPhases = (
-				90BEB1C4266FE7A7006ECD93 /* Sources */,
-				90BEB1C5266FE7A7006ECD93 /* Frameworks */,
-				90BEB1C6266FE7A7006ECD93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90BEB1CA266FE7A7006ECD93 /* PBXTargetDependency */,
-			);
-			name = FetchRewardsTests;
-			productName = FetchRewardsTests;
-			productReference = 90BEB1C8266FE7A7006ECD93 /* FetchRewardsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		90BEB1D2266FE7A7006ECD93 /* FetchRewardsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90BEB1E2266FE7A7006ECD93 /* Build configuration list for PBXNativeTarget "FetchRewardsUITests" */;
-			buildPhases = (
-				90BEB1CF266FE7A7006ECD93 /* Sources */,
-				90BEB1D0266FE7A7006ECD93 /* Frameworks */,
-				90BEB1D1266FE7A7006ECD93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90BEB1D5266FE7A7006ECD93 /* PBXTargetDependency */,
-			);
-			name = FetchRewardsUITests;
-			productName = FetchRewardsUITests;
-			productReference = 90BEB1D3266FE7A7006ECD93 /* FetchRewardsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,16 +193,12 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					908429F1267184030061485E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 90BEB1AE266FE7A4006ECD93;
+					};
 					90BEB1AE266FE7A4006ECD93 = {
 						CreatedOnToolsVersion = 12.5;
-					};
-					90BEB1C7266FE7A7006ECD93 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 90BEB1AE266FE7A4006ECD93;
-					};
-					90BEB1D2266FE7A7006ECD93 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 90BEB1AE266FE7A4006ECD93;
 					};
 				};
 			};
@@ -264,13 +216,20 @@
 			projectRoot = "";
 			targets = (
 				90BEB1AE266FE7A4006ECD93 /* FetchRewards */,
-				90BEB1C7266FE7A7006ECD93 /* FetchRewardsTests */,
-				90BEB1D2266FE7A7006ECD93 /* FetchRewardsUITests */,
+				908429F1267184030061485E /* FetchRewardsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		908429F0267184030061485E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908429FF267187840061485E /* SeatGeekEventsSampleResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BEB1AD266FE7A4006ECD93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,23 +239,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90BEB1C6266FE7A7006ECD93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90BEB1D1266FE7A7006ECD93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		908429EE267184030061485E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908429FD267184BB0061485E /* SeatGeekDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BEB1AB266FE7A4006ECD93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,34 +265,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90BEB1C4266FE7A7006ECD93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90BEB1CD266FE7A7006ECD93 /* FetchRewardsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90BEB1CF266FE7A7006ECD93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90BEB1D8266FE7A7006ECD93 /* FetchRewardsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		90BEB1CA266FE7A7006ECD93 /* PBXTargetDependency */ = {
+		908429F8267184030061485E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 90BEB1AE266FE7A4006ECD93 /* FetchRewards */;
-			targetProxy = 90BEB1C9266FE7A7006ECD93 /* PBXContainerItemProxy */;
-		};
-		90BEB1D5266FE7A7006ECD93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90BEB1AE266FE7A4006ECD93 /* FetchRewards */;
-			targetProxy = 90BEB1D4266FE7A7006ECD93 /* PBXContainerItemProxy */;
+			targetProxy = 908429F7267184030061485E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,6 +287,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		908429FA267184030061485E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M28B8923AA;
+				INFOPLIST_FILE = FetchRewardsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchRewards.app/FetchRewards";
+			};
+			name = Debug;
+		};
+		908429FB267184030061485E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M28B8923AA;
+				INFOPLIST_FILE = FetchRewardsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchRewards.app/FetchRewards";
+			};
+			name = Release;
+		};
 		90BEB1DA266FE7A7006ECD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,93 +483,18 @@
 			};
 			name = Release;
 		};
-		90BEB1E0266FE7A7006ECD93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M28B8923AA;
-				INFOPLIST_FILE = FetchRewardsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchRewards.app/FetchRewards";
-			};
-			name = Debug;
-		};
-		90BEB1E1266FE7A7006ECD93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M28B8923AA;
-				INFOPLIST_FILE = FetchRewardsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchRewards.app/FetchRewards";
-			};
-			name = Release;
-		};
-		90BEB1E3266FE7A7006ECD93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M28B8923AA;
-				INFOPLIST_FILE = FetchRewardsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchRewards;
-			};
-			name = Debug;
-		};
-		90BEB1E4266FE7A7006ECD93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M28B8923AA;
-				INFOPLIST_FILE = FetchRewardsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewardsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FetchRewards;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		908429F9267184030061485E /* Build configuration list for PBXNativeTarget "FetchRewardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				908429FA267184030061485E /* Debug */,
+				908429FB267184030061485E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		90BEB1AA266FE7A3006ECD93 /* Build configuration list for PBXProject "FetchRewards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -610,24 +509,6 @@
 			buildConfigurations = (
 				90BEB1DD266FE7A7006ECD93 /* Debug */,
 				90BEB1DE266FE7A7006ECD93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90BEB1DF266FE7A7006ECD93 /* Build configuration list for PBXNativeTarget "FetchRewardsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90BEB1E0266FE7A7006ECD93 /* Debug */,
-				90BEB1E1266FE7A7006ECD93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90BEB1E2266FE7A7006ECD93 /* Build configuration list for PBXNativeTarget "FetchRewardsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90BEB1E3266FE7A7006ECD93 /* Debug */,
-				90BEB1E4266FE7A7006ECD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,1740 @@
+{
+    "events": [
+        {
+            "type": "family",
+            "id": 5190574,
+            "datetime_utc": "2021-06-09T09:30:00",
+            "venue": {
+                "state": "CO",
+                "name_v2": "Budweiser Events Center",
+                "postal_code": "80538",
+                "name": "Budweiser Events Center",
+                "links": [],
+                "timezone": "America/Denver",
+                "url": "https://seatgeek.com/venues/budweiser-events-center/tickets",
+                "score": 0.507628,
+                "location": {
+                    "lat": 40.444,
+                    "lon": -104.99
+                },
+                "address": "5290 Arena Circle",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 6,
+                "city": "Loveland",
+                "slug": "budweiser-events-center",
+                "extended_address": "Loveland, CO 80538",
+                "id": 508,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 751,
+                "capacity": 5300,
+                "display_location": "Loveland, CO"
+            },
+            "datetime_tbd": true,
+            "performers": [
+                {
+                    "type": "theater",
+                    "name": "Trolls LIVE!",
+                    "image": "https://seatgeek.com/images/performers-landscape/trolls-live-55b9c6/719202/huge.jpg",
+                    "id": 719202,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/trolls-live-55b9c6/719202/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 17
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 6
+                        }
+                    ],
+                    "image_attribution": "null",
+                    "url": "https://seatgeek.com/trolls-live-tickets",
+                    "score": 0.37,
+                    "slug": "trolls-live",
+                    "home_venue_id": null,
+                    "short_name": "Trolls LIVE!",
+                    "num_upcoming_events": 17,
+                    "colors": null,
+                    "image_license": "null",
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T03:30:00",
+            "time_tbd": true,
+            "short_title": "Trolls LIVE! - Loveland (Rescheduled from 7/8/2020)",
+            "visible_until_utc": "2021-06-10T06:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 6
+                },
+                {
+                    "id": 3050000,
+                    "name": "family",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/trolls-live-loveland-rescheduled-from-7-8-2020-tickets/family/2021-06-09-3-30-am/5190574",
+            "score": 0.344,
+            "announce_date": "2020-01-21T00:00:00",
+            "created_at": "2020-01-21T16:07:35",
+            "date_tbd": true,
+            "title": "Trolls LIVE! - Loveland (Rescheduled from 7/8/2020)",
+            "popularity": 0.565,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "family",
+            "id": 5389544,
+            "datetime_utc": "2021-06-09T09:30:00",
+            "venue": {
+                "state": "MT",
+                "name_v2": "First Interstate Arena",
+                "postal_code": "59103",
+                "name": "First Interstate Arena",
+                "links": [],
+                "timezone": "America/Denver",
+                "url": "https://seatgeek.com/venues/first-interstate-arena/tickets",
+                "score": 0.626002,
+                "location": {
+                    "lat": 45.8004,
+                    "lon": -108.478
+                },
+                "address": "308 6th Ave N",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 10,
+                "city": "Billings",
+                "slug": "first-interstate-arena",
+                "extended_address": "Billings, MT 59103",
+                "id": 723,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 756,
+                "capacity": 12000,
+                "display_location": "Billings, MT"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_family",
+                    "name": "Baby Shark Live!",
+                    "image": "https://seatgeek.com/images/performers-landscape/baby-shark-live-445f59/712321/huge.jpg",
+                    "id": 712321,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/baby-shark-live-445f59/712321/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 24
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 6
+                        },
+                        {
+                            "id": 3050000,
+                            "name": "family",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.pinkfong.com/en/liveshows/",
+                    "url": "https://seatgeek.com/baby-shark-live-tickets",
+                    "score": 0.36,
+                    "slug": "baby-shark-live",
+                    "home_venue_id": null,
+                    "short_name": "Baby Shark Live!",
+                    "num_upcoming_events": 24,
+                    "colors": null,
+                    "image_license": "press photos",
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T03:30:00",
+            "time_tbd": true,
+            "short_title": "Baby Shark Life - Biling",
+            "visible_until_utc": "2021-06-10T06:00:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 92,
+                "lowest_price_good_deals": 75,
+                "lowest_price": 76,
+                "highest_price": 105,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [
+                    1,
+                    1,
+                    2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "median_price": 95,
+                "lowest_sg_base_price": 54,
+                "lowest_sg_base_price_good_deals": 54
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 6
+                },
+                {
+                    "id": 3050000,
+                    "name": "family",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/baby-shark-life-biling-tickets/family/2021-06-09-3-30-am/5389544",
+            "score": 0.363,
+            "announce_date": "2021-04-22T00:00:00",
+            "created_at": "2021-04-22T21:44:59",
+            "date_tbd": false,
+            "title": "Baby Shark Life - Biling",
+            "popularity": 0.617,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "mlb",
+            "id": 5318787,
+            "datetime_utc": "2021-06-09T19:37:00",
+            "venue": {
+                "state": "CA",
+                "name_v2": "RingCentral Coliseum",
+                "postal_code": "94621",
+                "name": "RingCentral Coliseum",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/ringcentral-coliseum/tickets",
+                "score": 0.781784,
+                "location": {
+                    "lat": 37.7469,
+                    "lon": -122.201
+                },
+                "address": "7000 Coliseum Way",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 45,
+                "city": "Oakland",
+                "slug": "ringcentral-coliseum",
+                "extended_address": "Oakland, CA 94621",
+                "id": 14,
+                "popularity": 0,
+                "access_method": {
+                    "method": "PDF417",
+                    "created_at": "2019-10-01T01:19:02Z",
+                    "employee_only": false
+                },
+                "metro_code": 807,
+                "capacity": 36067,
+                "display_location": "Oakland, CA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "mlb",
+                    "name": "Oakland Athletics",
+                    "image": "https://seatgeek.com/images/performers-landscape/oakland-athletics-643432/14/huge.jpg",
+                    "id": 14,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/oakland-athletics-643432/14/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1010100,
+                            "short_name": null,
+                            "display_name": "American League",
+                            "display_type": "League",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1010100,
+                            "short_name": "AL West",
+                            "display_name": "American League West",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "american-league-west"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 95
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010100,
+                            "name": "mlb",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 3
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/redlegsfan21/15993646150/in/photolist-qniBMQ-qDRDND-ht5kQZ-ht6331-ht62ph-ht5WiA-ht6Ftx-ht5gx1-5aUypU-ddtWXp-5aUxv1-qb37Sp-nuE1aX-nLRmsz-nLRmw2-nK6Xyf-nNVWV4-nM6Hv1-66zEjk-ht61ky-ht5Ydh-ht5k7V-nuDEMi-efvrRn-4Tvdo6-dohGjL-dohwER-dohAq8-dohLb3-dohASD-dohJys-dohBHP-dohzXt-dohFXq-dohwN8-dohAvK-dohxFc-dohLv9-dohzLX-dohzGX-dohHrG-dohJ59-dohz5z-dohJtU-dohFnh-dohF3W-dohwRB-dohGsy-dohwY2-dohBuZ",
+                    "url": "https://seatgeek.com/oakland-athletics-tickets",
+                    "score": 0.64,
+                    "slug": "oakland-athletics",
+                    "home_venue_id": 14,
+                    "short_name": "Athletics",
+                    "num_upcoming_events": 95,
+                    "colors": {
+                        "all": [
+                            "#003831",
+                            "#EFB21E",
+                            "#003831"
+                        ],
+                        "iconic": "#003831",
+                        "primary": [
+                            "#003831",
+                            "#EFB21E"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 37.7469,
+                        "lon": -122.201
+                    }
+                },
+                {
+                    "type": "mlb",
+                    "name": "Arizona Diamondbacks",
+                    "image": "https://seatgeek.com/images/performers-landscape/arizona-diamondbacks-11241f/30/huge.jpg",
+                    "id": 30,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/arizona-diamondbacks-11241f/30/huge.jpg"
+                    },
+                    "divisions": [
+                        {
+                            "taxonomy_id": 1010100,
+                            "short_name": null,
+                            "display_name": "National League",
+                            "display_type": "League",
+                            "division_level": 1,
+                            "slug": null
+                        },
+                        {
+                            "taxonomy_id": 1010100,
+                            "short_name": "NL West",
+                            "display_name": "National League West",
+                            "display_type": "Division",
+                            "division_level": 2,
+                            "slug": "national-league-west"
+                        }
+                    ],
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 100
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010100,
+                            "name": "mlb",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 3
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/clintus/13551261244/in/photolist-mDtKRf-dTfnHi-aLivCH-9x1sfK-5YbQCM-74UFyM-9x6oX9-ntmbz7-ntmmha-nMC4PM-4X4Tz6-a68u99-4UYfCZ-j9oG8c-j9rFa7-j9nada-j9rD9y-j9oByH-n5sJDB-dTfnM6-rA686-nMBYBc-nHN7w7-4Z2TQZ-4YBZDn-rA8a3-4Z79ef-rA6g8-rA7Ca-rA7Le-rA7yA-rA86K-rA7d6-rA6bL-rA8Vp-rA82p-rAbdG-rA7of-rAbJ1-rA8RY-rA8EH-rA7rA-rA91H-rA79N-rA96f-rA8B4-rA72y-rAb7u-rAaYo-4UX9YD",
+                    "url": "https://seatgeek.com/arizona-diamondbacks-tickets",
+                    "score": 0.64,
+                    "slug": "arizona-diamondbacks",
+                    "home_venue_id": 30,
+                    "short_name": "Diamondbacks",
+                    "num_upcoming_events": 100,
+                    "colors": {
+                        "all": [
+                            "#191919",
+                            "#A71930",
+                            "#A71930"
+                        ],
+                        "iconic": "#A71930",
+                        "primary": [
+                            "#191919",
+                            "#A71930"
+                        ]
+                    },
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 33.4455,
+                        "lon": -112.066
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T12:37:00",
+            "time_tbd": false,
+            "short_title": "Diamondbacks at Athletics",
+            "visible_until_utc": "2021-06-09T23:37:00",
+            "stats": {
+                "listing_count": 98,
+                "average_price": 47,
+                "lowest_price_good_deals": 23,
+                "lowest_price": 23,
+                "highest_price": 87,
+                "visible_listing_count": 98,
+                "dq_bucket_counts": [
+                    1,
+                    22,
+                    45,
+                    15,
+                    13,
+                    8,
+                    0,
+                    0
+                ],
+                "median_price": 46,
+                "lowest_sg_base_price": 13,
+                "lowest_sg_base_price_good_deals": 13
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1010000,
+                    "name": "baseball",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1010100,
+                    "name": "mlb",
+                    "parent_id": 1010000,
+                    "rank": 3
+                }
+            ],
+            "url": "https://seatgeek.com/diamondbacks-at-athletics-tickets/6-9-2021-oakland-california-ringcentral-coliseum/mlb/5318787",
+            "score": 0.643,
+            "announce_date": "2020-07-17T00:00:00",
+            "created_at": "2020-07-17T16:00:06",
+            "date_tbd": false,
+            "title": "Arizona Diamondbacks at Oakland Athletics",
+            "popularity": 0.847,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "PDF417",
+                "created_at": "2019-10-01T01:19:02Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "minor_league_baseball",
+            "id": 5378307,
+            "datetime_utc": "2021-06-09T22:35:00",
+            "venue": {
+                "state": "NC",
+                "name_v2": "Durham Bulls Athletic Park",
+                "postal_code": "27701",
+                "name": "Durham Bulls Athletic Park",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/durham-bulls-athletic-park/tickets",
+                "score": 0.451001,
+                "location": {
+                    "lat": 35.9916,
+                    "lon": -78.904
+                },
+                "address": "409 Blackwell St",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 37,
+                "city": "Durham",
+                "slug": "durham-bulls-athletic-park",
+                "extended_address": "Durham, NC 27701",
+                "id": 387,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 560,
+                "capacity": 10000,
+                "display_location": "Durham, NC"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "minor_league_baseball",
+                    "name": "Durham Bulls",
+                    "image": "https://seatgeek.com/images/performers-landscape/durham-bulls-3377e3/9265/huge.jpg",
+                    "id": 9265,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/durham-bulls-3377e3/9265/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 74
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010300,
+                            "name": "minor_league_baseball",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/durham-bulls-tickets",
+                    "score": 0.44,
+                    "slug": "durham-bulls",
+                    "home_venue_id": 387,
+                    "short_name": "Durham Bulls",
+                    "num_upcoming_events": 74,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": {
+                        "lat": 35.9916,
+                        "lon": -78.904
+                    }
+                },
+                {
+                    "type": "minor_league_baseball",
+                    "name": "Charlotte Knights",
+                    "image": "https://seatgeek.com/images/performers-landscape/charlotte-knights-52115b/9246/huge.jpg",
+                    "id": 9246,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/charlotte-knights-52115b/9246/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 80
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010000,
+                            "name": "baseball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1010300,
+                            "name": "minor_league_baseball",
+                            "parent_id": 1010000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/charlotte-knights-tickets",
+                    "score": 0.48,
+                    "slug": "charlotte-knights",
+                    "home_venue_id": 58761,
+                    "short_name": "Charlotte Knights",
+                    "num_upcoming_events": 80,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": {
+                        "lat": 35.2276,
+                        "lon": -80.8486
+                    }
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T18:35:00",
+            "time_tbd": false,
+            "short_title": "Charlotte Knights at Durham Bulls",
+            "visible_until_utc": "2021-06-10T02:35:00",
+            "stats": {
+                "listing_count": 4,
+                "average_price": 33,
+                "lowest_price_good_deals": 31,
+                "lowest_price": 31,
+                "highest_price": 36,
+                "visible_listing_count": 4,
+                "dq_bucket_counts": [
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "median_price": 30,
+                "lowest_sg_base_price": 19,
+                "lowest_sg_base_price_good_deals": 19
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1010000,
+                    "name": "baseball",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1010300,
+                    "name": "minor_league_baseball",
+                    "parent_id": 1010000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/charlotte-knights-at-durham-bulls-tickets/minor-league-baseball/2021-06-09-6-35-pm/5378307",
+            "score": 0.392,
+            "announce_date": "2021-03-18T00:00:00",
+            "created_at": "2021-03-18T16:01:15",
+            "date_tbd": false,
+            "title": "Charlotte Knights at Durham Bulls",
+            "popularity": 0.686,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "sports",
+            "id": 5406974,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "OK",
+                "name_v2": "ASA Hall of Fame Stadium",
+                "postal_code": "73111",
+                "name": "ASA Hall of Fame Stadium",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/asa-hall-of-fame-stadium/tickets",
+                "score": 0.599771,
+                "location": {
+                    "lat": 35.5262,
+                    "lon": -97.4645
+                },
+                "address": "2801 NE 50th St",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 2,
+                "city": "Oklahoma City",
+                "slug": "asa-hall-of-fame-stadium",
+                "extended_address": "Oklahoma City, OK 73111",
+                "id": 6004,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 650,
+                "capacity": 7300,
+                "display_location": "Oklahoma City, OK"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "sports",
+                    "name": "NCAA Women's College World Series",
+                    "image": "https://seatgeek.com/images/performers-landscape/ncaa-women-s-college-world-series-d7d77c/141444/huge.jpg",
+                    "id": 141444,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/ncaa-women-s-college-world-series-d7d77c/141444/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 2
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/ncaa-women-s-college-world-series-tickets",
+                    "score": 0.59,
+                    "slug": "ncaa-women-s-college-world-series",
+                    "home_venue_id": null,
+                    "short_name": "NCAA Women's College World Series",
+                    "num_upcoming_events": 2,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T18:00:00",
+            "time_tbd": false,
+            "short_title": "NCAA Womens College World Series Session 9 (Rescheduled from June 8, 2021)",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": 14,
+                "average_price": 68,
+                "lowest_price_good_deals": 39,
+                "lowest_price": 39,
+                "highest_price": 134,
+                "visible_listing_count": 14,
+                "dq_bucket_counts": [
+                    0,
+                    1,
+                    5,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "median_price": 56,
+                "lowest_sg_base_price": 24,
+                "lowest_sg_base_price_good_deals": 24
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/ncaa-womens-college-world-series-session-9-rescheduled-from-june-8-2021-tickets/sport/2021-06-09-6-pm/5406974",
+            "score": 0.563,
+            "announce_date": "2021-05-16T00:00:00",
+            "created_at": "2021-05-16T16:00:08",
+            "date_tbd": false,
+            "title": "NCAA Womens College World Series Session 9 (Rescheduled from June 8, 2021)",
+            "popularity": 0.788,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "wnba",
+            "id": 5386414,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "GA",
+                "name_v2": "Gateway Center Arena at College Park",
+                "postal_code": "30337",
+                "name": "Gateway Center Arena at College Park",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/gateway-center-arena-at-college-park/tickets",
+                "score": 0,
+                "location": {
+                    "lat": 33.6456,
+                    "lon": -84.4576
+                },
+                "address": "2000 Convention Center Concourse",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 16,
+                "city": "Atlanta",
+                "slug": "gateway-center-arena-at-college-park",
+                "extended_address": "Atlanta, GA 30337",
+                "id": 487763,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 524,
+                "capacity": 0,
+                "display_location": "Atlanta, GA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "wnba",
+                    "name": "Atlanta Dream",
+                    "image": "https://seatgeek.com/images/performers-landscape/atlanta-dream-79a443/10743/huge.jpg",
+                    "id": 10743,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/atlanta-dream-79a443/10743/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 26
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1030000,
+                            "name": "basketball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1030400,
+                            "name": "wnba",
+                            "parent_id": 1030000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/atlanta-dream-tickets",
+                    "score": 0.43,
+                    "slug": "atlanta-dream",
+                    "home_venue_id": null,
+                    "short_name": "Atlanta Dream",
+                    "num_upcoming_events": 26,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null
+                },
+                {
+                    "type": "wnba",
+                    "name": "Seattle Storm",
+                    "image": "https://seatgeek.com/images/performers-landscape/seattle-storm-8c7c85/10736/huge.jpg",
+                    "id": 10736,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/seattle-storm-8c7c85/10736/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 26
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1030000,
+                            "name": "basketball",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1030400,
+                            "name": "wnba",
+                            "parent_id": 1030000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/seattle-storm-tickets",
+                    "score": 0.43,
+                    "slug": "seattle-storm",
+                    "home_venue_id": null,
+                    "short_name": "Seattle Storm",
+                    "num_upcoming_events": 26,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T19:00:00",
+            "time_tbd": false,
+            "short_title": "Seattle Storm at Atlanta Dream",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": 6,
+                "average_price": 83,
+                "lowest_price_good_deals": 54,
+                "lowest_price": 54,
+                "highest_price": 135,
+                "visible_listing_count": 6,
+                "dq_bucket_counts": [
+                    12,
+                    10,
+                    11,
+                    6,
+                    4,
+                    3,
+                    6,
+                    0
+                ],
+                "median_price": 86,
+                "lowest_sg_base_price": 36,
+                "lowest_sg_base_price_good_deals": 36
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1030000,
+                    "name": "basketball",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1030400,
+                    "name": "wnba",
+                    "parent_id": 1030000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/seattle-storm-at-atlanta-dream-tickets/wnba/2021-06-09-7-pm/5386414",
+            "score": 0.405,
+            "announce_date": "2021-04-13T00:00:00",
+            "created_at": "2021-04-13T21:36:20",
+            "date_tbd": false,
+            "title": "Seattle Storm at Atlanta Dream",
+            "popularity": 0.649,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "comedy",
+            "id": 5371713,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "OH",
+                "name_v2": "Hilarities 4th Street Theatre",
+                "postal_code": "44115",
+                "name": "Hilarities 4th Street Theatre",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/hilarities-4th-street-theatre/tickets",
+                "score": 0,
+                "location": {
+                    "lat": 41.4992,
+                    "lon": -81.6901
+                },
+                "address": "2035 E 4th Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 14,
+                "city": "Cleveland",
+                "slug": "hilarities-4th-street-theatre",
+                "extended_address": "Cleveland, OH 44115",
+                "id": 52705,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 510,
+                "capacity": 0,
+                "display_location": "Cleveland, OH"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_comedy",
+                    "name": "We Hate Movies",
+                    "image": "https://seatgeek.com/images/performers-landscape/we-hate-movies-2070a4/488708/huge.jpg",
+                    "id": 488708,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/we-hate-movies-2070a4/488708/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 2
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 6
+                        },
+                        {
+                            "id": 3040000,
+                            "name": "comedy",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 7
+                        }
+                    ],
+                    "image_attribution": "SG Generic",
+                    "url": "https://seatgeek.com/we-hate-movies-tickets",
+                    "score": 0.35,
+                    "slug": "we-hate-movies",
+                    "home_venue_id": null,
+                    "short_name": "We Hate Movies",
+                    "num_upcoming_events": 2,
+                    "colors": null,
+                    "image_license": "SG Generic",
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T19:00:00",
+            "time_tbd": false,
+            "short_title": "We Hate Movies",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 6
+                },
+                {
+                    "id": 3040000,
+                    "name": "comedy",
+                    "parent_id": 3000000,
+                    "rank": 7
+                }
+            ],
+            "url": "https://seatgeek.com/we-hate-movies-tickets/comedy/2021-06-09-7-pm/5371713",
+            "score": 0.404,
+            "announce_date": "2021-02-25T00:00:00",
+            "created_at": "2021-02-25T16:06:23",
+            "date_tbd": false,
+            "title": "We Hate Movies",
+            "popularity": 0.606,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "sports",
+            "id": 5365453,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "GA",
+                "name_v2": "Grayson Stadium",
+                "postal_code": "31404",
+                "name": "Grayson Stadium",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/grayson-stadium/tickets",
+                "score": 0,
+                "location": {
+                    "lat": 32.0454,
+                    "lon": -81.079
+                },
+                "address": "1401 East Victory Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 23,
+                "city": "Savannah",
+                "slug": "grayson-stadium",
+                "extended_address": "Savannah, GA 31404",
+                "id": 15842,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 507,
+                "capacity": 0,
+                "display_location": "Savannah, GA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "sports",
+                    "name": "Savannah Bananas",
+                    "image": "https://seatgeek.com/images/performers-landscape/savannah-bananas-9838a8/681408/huge.jpg",
+                    "id": 681408,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/savannah-bananas-9838a8/681408/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 24
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "null",
+                    "url": "https://seatgeek.com/savannah-bananas-tickets",
+                    "score": 0.32,
+                    "slug": "savannah-bananas",
+                    "home_venue_id": null,
+                    "short_name": "Savannah Bananas",
+                    "num_upcoming_events": 24,
+                    "colors": null,
+                    "image_license": "null",
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T19:00:00",
+            "time_tbd": false,
+            "short_title": "Spartanburg at Savannah Bananas",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/spartanburg-at-savannah-bananas-tickets/sport/2021-06-09-7-pm/5365453",
+            "score": 0.318,
+            "announce_date": "2021-02-10T00:00:00",
+            "created_at": "2021-02-10T16:00:20",
+            "date_tbd": false,
+            "title": "Spartanburg at Savannah Bananas",
+            "popularity": 0.576,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "concert",
+            "id": 5404560,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "GA",
+                "name_v2": "Macon City Auditorium",
+                "postal_code": "31201",
+                "name": "Macon City Auditorium",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/macon-city-auditorium/tickets",
+                "score": 0.550343,
+                "location": {
+                    "lat": 32.8374,
+                    "lon": -83.6312
+                },
+                "address": "415 1st Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 10,
+                "city": "Macon",
+                "slug": "macon-city-auditorium",
+                "extended_address": "Macon, GA 31201",
+                "id": 3698,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 503,
+                "capacity": 2688,
+                "display_location": "Macon, GA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "band",
+                    "name": "The Allman Betts Band",
+                    "image": "https://seatgeek.com/images/performers-landscape/the-allman-betts-band-e555f8/697023/huge.jpg",
+                    "id": 697023,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/the-allman-betts-band-e555f8/697023/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 24
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "Rick Diamond / Getty Images Entertainment / Getty Images",
+                    "url": "https://seatgeek.com/the-allman-betts-band-tickets",
+                    "score": 0.46,
+                    "slug": "the-allman-betts-band",
+                    "home_venue_id": null,
+                    "short_name": "The Allman Betts Band",
+                    "num_upcoming_events": 24,
+                    "colors": null,
+                    "image_license": "rightsmanaged",
+                    "popularity": 0,
+                    "location": null
+                },
+                {
+                    "type": "band",
+                    "name": "River Kittens",
+                    "image": "https://seatgeek.com/images/performers-landscape/river-kittens-1362e0/747183/huge.jpg",
+                    "id": 747183,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/river-kittens-1362e0/747183/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "Photo by Ron Smith on Unsplash",
+                    "url": "https://seatgeek.com/river-kittens-tickets",
+                    "score": 0.39,
+                    "slug": "river-kittens",
+                    "home_venue_id": null,
+                    "short_name": "River Kittens",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T19:00:00",
+            "time_tbd": false,
+            "short_title": "The Allman Betts Band with River Kittens",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": 64,
+                "average_price": 148,
+                "lowest_price_good_deals": 38,
+                "lowest_price": 38,
+                "highest_price": 299,
+                "visible_listing_count": 64,
+                "dq_bucket_counts": [
+                    7,
+                    7,
+                    16,
+                    11,
+                    10,
+                    11,
+                    8,
+                    0
+                ],
+                "median_price": 160,
+                "lowest_sg_base_price": 24,
+                "lowest_sg_base_price_good_deals": 24
+            },
+            "taxonomies": [
+                {
+                    "id": 2000000,
+                    "name": "concert",
+                    "parent_id": null,
+                    "rank": 1
+                }
+            ],
+            "url": "https://seatgeek.com/the-allman-betts-band-with-river-kittens-tickets/macon-georgia-macon-city-auditorium-2021-06-09-7-pm/concert/5404560",
+            "score": 0.434,
+            "announce_date": "2021-05-15T00:00:00",
+            "created_at": "2021-05-15T16:03:34",
+            "date_tbd": false,
+            "title": "The Allman Betts Band with River Kittens",
+            "popularity": 0.692,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "international_soccer",
+            "id": 5401521,
+            "datetime_utc": "2021-06-09T23:00:00",
+            "venue": {
+                "state": "UT",
+                "name_v2": "Rio Tinto Stadium",
+                "postal_code": "84070",
+                "name": "Rio Tinto Stadium",
+                "links": [],
+                "timezone": "America/Denver",
+                "url": "https://seatgeek.com/venues/rio-tinto-stadium/tickets",
+                "score": 0.640742,
+                "location": {
+                    "lat": 40.6655,
+                    "lon": -111.888
+                },
+                "address": "9256 South State Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 32,
+                "city": "Sandy",
+                "slug": "rio-tinto-stadium",
+                "extended_address": "Sandy, UT 84070",
+                "id": 228,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 770,
+                "capacity": 20008,
+                "display_location": "Sandy, UT"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "international_soccer",
+                    "name": "U.S. Mens National Soccer Team",
+                    "image": "https://seatgeek.com/images/performers-landscape/u-s-mens-national-soccer-team-9e1b88/11556/huge.jpg",
+                    "id": 11556,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/u-s-mens-national-soccer-team-9e1b88/11556/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1050000,
+                            "name": "soccer",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1050400,
+                            "name": "international_soccer",
+                            "parent_id": 1050000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "SG Generic",
+                    "url": "https://seatgeek.com/u-s-mens-national-soccer-team-tickets",
+                    "score": 0.67,
+                    "slug": "u-s-mens-national-soccer-team",
+                    "home_venue_id": null,
+                    "short_name": "US Mens Soccer",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": "SG Generic",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null
+                },
+                {
+                    "type": "international_soccer",
+                    "name": "Costa Rica National Soccer Team",
+                    "image": "https://seatgeek.com/images/performers-landscape/generic-international-soccer-66c692/677192/32410/huge.jpg",
+                    "id": 32435,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/generic-international-soccer-66c692/677192/32410/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 1
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1050000,
+                            "name": "soccer",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1050400,
+                            "name": "international_soccer",
+                            "parent_id": 1050000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": null,
+                    "url": "https://seatgeek.com/costa-rica-national-soccer-team-tickets",
+                    "score": 0.67,
+                    "slug": "costa-rica-national-soccer-team",
+                    "home_venue_id": null,
+                    "short_name": "Costa Rica National Soccer Team",
+                    "num_upcoming_events": 1,
+                    "colors": null,
+                    "image_license": null,
+                    "popularity": 0,
+                    "away_team": true,
+                    "location": null
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2021-06-09T17:00:00",
+            "time_tbd": false,
+            "short_title": "Costa Rica National  Team at U.S. Mens National Soccer Team",
+            "visible_until_utc": "2021-06-10T03:00:00",
+            "stats": {
+                "listing_count": 2,
+                "average_price": 65,
+                "lowest_price_good_deals": 53,
+                "lowest_price": 53,
+                "highest_price": 122,
+                "visible_listing_count": 2,
+                "dq_bucket_counts": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "median_price": 52,
+                "lowest_sg_base_price": 36,
+                "lowest_sg_base_price_good_deals": 36
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1050000,
+                    "name": "soccer",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1050400,
+                    "name": "international_soccer",
+                    "parent_id": 1050000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/costa-rica-national-team-at-u-s-mens-national-soccer-team-tickets/international-soccer/2021-06-09-5-pm/5401521",
+            "score": 0.552,
+            "announce_date": "2021-05-11T00:00:00",
+            "created_at": "2021-05-11T16:00:07",
+            "date_tbd": false,
+            "title": "Costa Rica National  Team at U.S. Mens National Soccer Team",
+            "popularity": 0.783,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        }
+    ],
+    "meta": {
+        "total": 51771,
+        "took": 8,
+        "page": 1,
+        "per_page": 10,
+        "geolocation": null
+    },
+    "in_hand": {}
+}
