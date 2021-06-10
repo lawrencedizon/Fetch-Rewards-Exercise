@@ -7,9 +7,11 @@
 
 import UIKit
 
+/// - CustomTableViewCell manages the ViewController's tableView cell
 class CustomTableViewCell: UITableViewCell {
     static let identifier: String = "CustomTableViewCell"
     
+    //MARK: - Properties
     lazy var eventLabelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [eventTitleLabel,eventLocationLabel, eventDateAndTimeStackView])
         stackView.axis = .vertical
@@ -29,7 +31,6 @@ class CustomTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    
     
     let eventImageView: UIImageView = {
         let imageView = UIImageView()
@@ -52,7 +53,6 @@ class CustomTableViewCell: UITableViewCell {
     
     let eventLocationLabel: UILabel = {
         let locationLabel = UILabel()
-        locationLabel.textColor = .gray
         locationLabel.font = UIFont(name: "Helvetica", size: 15)
         return locationLabel
     }()
@@ -71,6 +71,20 @@ class CustomTableViewCell: UITableViewCell {
         return timeLabel
     }()
     
+    //MARK: - View LifeCycle
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        clipsToBounds = true
+        contentView.addSubview(eventImageView)
+        contentView.addSubview(eventLabelsStackView)
+        layoutConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - AutoLayout
     private func layoutConstraints(){
         var constraints = [NSLayoutConstraint]()
         
@@ -89,25 +103,4 @@ class CustomTableViewCell: UITableViewCell {
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
     }
-    
-    
-    //MARK: - View LifeCycle
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        clipsToBounds = true
-        
-        contentView.addSubview(eventImageView)
-        contentView.addSubview(eventLabelsStackView)
-
-//        self.contentView.addSubview(eventTitleLabel)
-//        self.contentView.addSubview(eventLocationLabel)
-//        self.contentView.addSubview(eventDateAndTimeLabel)
-        layoutConstraints()
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
 }

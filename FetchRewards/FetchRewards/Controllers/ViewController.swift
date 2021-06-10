@@ -9,22 +9,23 @@ import UIKit
 
 ///ViewController - allows the user to search for events and display the results into a TableView
 class ViewController: UIViewController {
-    var testData = ["Los Angeles Rams at Tampa Bay Buccaneers",
-                    "Atlanta Falcons at New Orleans Saints",
-                    "New Mexico Lobos at Utah State Aggies Football",
-                    "Washington Football Team at Dallas Cowboys"]
+    private var eventResults = [Event]()
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
             searchBar.delegate = self
             searchBar.searchBarStyle = UISearchBar.Style.minimal
             searchBar.placeholder = "Search events"
-        if #available(iOS 13.0, *) {
-            searchBar.searchTextField.defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        } else {
-            // Fallback on earlier versions
-        }
+            let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: UIControl.State.normal)
             searchBar.showsCancelButton = true
+        
+            if #available(iOS 13.0, *) {
+                searchBar.searchTextField.leftView?.tintColor = .white
+                searchBar.searchTextField.defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            } else {
+            //TODO: - For versions below 13.0 make the searchBar design in white tint
+            }
         return searchBar
     }()
     
@@ -33,32 +34,32 @@ class ViewController: UIViewController {
                 tableView.delegate = self
                 tableView.dataSource = self
                 tableView.keyboardDismissMode = .onDrag
+                tableView.showsVerticalScrollIndicator = false
                 tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
                 tableView.translatesAutoresizingMaskIntoConstraints = false
                 return tableView
     }()
-    
-    private func layoutConstraints(){
-        var constraints = [NSLayoutConstraint]()
-        //SearchBar
-        //TableView
-        constraints.append(tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor))
-        constraints.append(tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor))
-        constraints.append(tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
-        constraints.append(tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
-     
-        //Activate constraints
-        NSLayoutConstraint.activate(constraints)
-    }
 
 //MARK: - ViewController Lifecycle
-       override func loadView() {
+    override func loadView() {
         super.loadView()
         setupUserInterface()
         
-        print("View controller loaded")
+        let networkManager = NetworkManager()
+        networkManager.fetch(type: .events)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.eventResults = networkManager.fetchedEvents
+            print("eventResults count: \(self.eventResults.count)")
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.rowHeight = 200
+    }
     
 //MARK: - User Interface
     private func setupUserInterface(){
@@ -68,23 +69,40 @@ class ViewController: UIViewController {
         navigationItem.titleView = searchBar
         layoutConstraints()
     }
+//MARK: - AutoLayout
+    private func layoutConstraints(){
+        var constraints = [NSLayoutConstraint]()
+
+        //TableView
+        constraints.append(tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor))
+        constraints.append(tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor))
+        constraints.append(tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
+        constraints.append(tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+     
+        //Activate constraints
+        NSLayoutConstraint.activate(constraints)
+    }
 }
 
 //MARK: - TableView Delegates
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        testData.count
+        eventResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-        cell.eventTitleLabel.text = testData[indexPath.row]
-        cell.eventImageView.image = UIImage(named: "testImage.jpg")
-        cell.eventLocationLabel.text = "Tampa, FL"
-        cell.eventDateLabel.text = "Tuesday, 24 Nov 2020"
-        cell.eventTimeLabel.text = "01:15 AM"
-        return cell
+        cell.selectionStyle = .none
+        let eventInfo = eventResults[indexPath.row]
         
+        cell.eventTitleLabel.text = eventInfo.name
+        //FIXME: - Retrieve image
+        cell.eventImageView.image = UIImage(named: "testImage.jpg")
+        cell.eventLocationLabel.text = "\(eventInfo.city), \(eventInfo.state)"
+        cell.eventDateLabel.text = "\(eventInfo.date)"
+        //FIXME: - Placeholder time
+        cell.eventTimeLabel.text = "Placeholder time"
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
@@ -94,4 +112,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: - SearchBar Delegates
 extension ViewController: UISearchBarDelegate {
 }
-
