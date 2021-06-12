@@ -8,7 +8,7 @@
 import UIKit
 
 ///ViewController - allows the user to search for events and display the results into a TableView
-class ViewController: UIViewController {
+class EventsViewController: UIViewController {
     private var eventResults = [Event]()
     
     private lazy var searchBar: UISearchBar = {
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 tableView.dataSource = self
                 tableView.keyboardDismissMode = .onDrag
                 tableView.showsVerticalScrollIndicator = false
-                tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+                tableView.register(EventTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.identifier)
                 tableView.translatesAutoresizingMaskIntoConstraints = false
                 return tableView
     }()
@@ -85,13 +85,13 @@ class ViewController: UIViewController {
 }
 
 //MARK: - TableView Delegates
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         eventResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.identifier, for: indexPath) as! EventTableViewCell
         cell.selectionStyle = .none
         let eventInfo = eventResults[indexPath.row]
         
@@ -104,11 +104,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.eventTimeLabel.text = "Placeholder time"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let eventDetailVC = EventsDetailViewController()
+        navigationController?.pushViewController(eventDetailVC, animated: true)
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
     }
+    
+    
 }
 
 //MARK: - SearchBar Delegates
-extension ViewController: UISearchBarDelegate {
+extension EventsViewController: UISearchBarDelegate {
 }

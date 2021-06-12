@@ -8,8 +8,8 @@
 import UIKit
 
 /// - CustomTableViewCell manages the ViewController's tableView cell
-class CustomTableViewCell: UITableViewCell {
-    static let identifier: String = "CustomTableViewCell"
+class EventTableViewCell: UITableViewCell {
+    static let identifier: String = "EventTableViewCell"
     
     //MARK: - Properties
     lazy var eventLabelsStackView: UIStackView = {
@@ -43,7 +43,7 @@ class CustomTableViewCell: UITableViewCell {
     
     let eventTitleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.preferredMaxLayoutWidth = 220
+        titleLabel.preferredMaxLayoutWidth = 200
         titleLabel.font = UIFont(name: "Helvetica-Bold", size: 21)
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleLabel.numberOfLines = 0
@@ -89,16 +89,17 @@ class CustomTableViewCell: UITableViewCell {
         var constraints = [NSLayoutConstraint]()
         
         //eventImageView
-        constraints.append(eventImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 30 ))
-        constraints.append(eventImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20))
+        constraints.append(eventImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 45 ))
+        constraints.append(eventImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 45))
         constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 100))
         constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 100))
         
         //eventLabels StackView
         constraints.append(eventLabelsStackView.leftAnchor.constraint(equalTo: eventImageView.rightAnchor, constant: 20))
         constraints.append(eventLocationLabel.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor))
-        constraints.append(eventLabelsStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20))
-        constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 220))
+        constraints.append(eventLabelsStackView.topAnchor.constraint(equalTo: eventImageView.topAnchor))
+        
+        constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 200))
         
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
