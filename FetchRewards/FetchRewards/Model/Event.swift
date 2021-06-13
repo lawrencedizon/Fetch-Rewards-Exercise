@@ -13,15 +13,21 @@ struct Event {
     let state: String
     let venueName: String
     let date: String
-    let performers: [String]
+    let performerNames: [String]
+    let performerImages: [String]
+    let ticketURL: String
     
-    init(eventTitle: String, city: String, state: String, venueName: String, performers: [String], date: String){
+    
+    init(eventTitle: String, city: String, state: String, venueName: String, performerNames: [String], date: String, performerImages: [String], ticketURL: String){
         self.eventTitle = eventTitle
         self.city = city
         self.state = state
         self.venueName = venueName
         self.date = date
-        self.performers = performers
+        self.performerNames = performerNames
+        self.performerImages = performerImages
+        self.ticketURL = ticketURL
     }
     
 }
+

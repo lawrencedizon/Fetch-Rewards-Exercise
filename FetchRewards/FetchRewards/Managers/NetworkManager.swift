@@ -54,21 +54,26 @@ final class NetworkManager {
             
             if let apiResponse = try? JSONDecoder().decode(EventsAPIResponse.self, from: jsonData){
                 for item in apiResponse.events{
-                    if let eventTitle = item.title,
+                    if let eventTitle = item.short_title,
                        let city = item.venue.city,
                        let state = item.venue.state,
                        let venue = item.venue.name,
-                       let date = item.datetime_utc {
+                       let date = item.datetime_utc,
+                       let ticketURL = item.url{
                         
-                        print("ITEM")
-                        print(eventTitle)
-                        var performerArray = [String]()
+                        var performerNamesArray = [String]()
+                        var performerImagesArray = [String]()
                         for performer in item.performers {
-                            if let performerName = performer.name {
-                                performerArray.append(performerName)
+                            if let performerName = performer.name,
+                               let performerImage = performer.image{
+                                performerNamesArray.append(performerName)
+                                performerImagesArray.append(performerImage)
+                               
                             }
+                        
                         }
-                        self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performers: performerArray, date: date))
+                        
+                        self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performerNames: performerNamesArray,  date: date, performerImages: performerImagesArray, ticketURL: ticketURL))
                     }else{
                         print("Failed to decode in general")
                     }

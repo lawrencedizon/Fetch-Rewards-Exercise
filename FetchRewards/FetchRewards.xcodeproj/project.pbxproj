@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901E6DBF2676859900946C32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E6DBE2676859900946C32 /* Extensions.swift */; };
 		90439BAB2674202C0057858F /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90439BAA2674202C0057858F /* EventsDetailViewController.swift */; };
+		905F42FA2676909000AE06D5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905F42F92676909000AE06D5 /* Helpers.swift */; };
 		908429FD267184BB0061485E /* SeatGeekDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908429FC267184BB0061485E /* SeatGeekDataTests.swift */; };
 		908429FF267187840061485E /* SeatGeekEventsSampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 908429FE267187840061485E /* SeatGeekEventsSampleResponse.json */; };
 		90842A012671A2640061485E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90842A002671A2640061485E /* Event.swift */; };
@@ -34,7 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		901E6DBE2676859900946C32 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		90439BAA2674202C0057858F /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
+		905F42F92676909000AE06D5 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		908429F2267184030061485E /* FetchRewardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRewardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908429F6267184030061485E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908429FC267184BB0061485E /* SeatGeekDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatGeekDataTests.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		901E6DBD2676858B00946C32 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				901E6DBE2676859900946C32 /* Extensions.swift */,
+				905F42F92676909000AE06D5 /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		908429F3267184030061485E /* FetchRewardsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		90BEB1B1266FE7A4006ECD93 /* FetchRewards */ = {
 			isa = PBXGroup;
 			children = (
+				901E6DBD2676858B00946C32 /* Utilities */,
 				90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */,
 				90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */,
 				90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */,
@@ -267,8 +281,10 @@
 				90BEB1E9266FE950006ECD93 /* EventTableViewCell.swift in Sources */,
 				90BEB1EF267168B5006ECD93 /* NetworkManager.swift in Sources */,
 				90BEB1ED26715D02006ECD93 /* Constants.swift in Sources */,
+				905F42FA2676909000AE06D5 /* Helpers.swift in Sources */,
 				90842A012671A2640061485E /* Event.swift in Sources */,
 				90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */,
+				901E6DBF2676859900946C32 /* Extensions.swift in Sources */,
 				90BEB1BD266FE7A4006ECD93 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

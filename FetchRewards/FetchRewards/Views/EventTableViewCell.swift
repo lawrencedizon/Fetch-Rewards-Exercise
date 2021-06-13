@@ -13,21 +13,21 @@ class EventTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     lazy var eventLabelsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [eventTitleLabel,eventLocationLabel, eventDateAndTimeStackView])
+        let stackView = UIStackView(arrangedSubviews: [eventTitleLabel, eventLocationAndDateStackView])
         stackView.axis = .vertical
         stackView.spacing = 5
-        stackView.alignment = .top
-        stackView.distribution = .fillProportionally
+        stackView.alignment = .leading
+        stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
-    lazy var eventDateAndTimeStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [eventDateLabel, eventTimeLabel])
+    lazy var eventLocationAndDateStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [eventLocationLabel, eventDateLabel])
         stackView.axis = .vertical
-        stackView.spacing = 0
-        stackView.alignment = .top
-        stackView.distribution = .fillProportionally
+        stackView.spacing = 5
+        stackView.alignment = .leading
+        stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -42,33 +42,26 @@ class EventTableViewCell: UITableViewCell {
     }()
     
     let eventTitleLabel: UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.preferredMaxLayoutWidth = 200
-        titleLabel.font = UIFont(name: "Helvetica-Bold", size: 21)
-        titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        titleLabel.numberOfLines = 0
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        return titleLabel
+        let label = UILabel()
+        label.preferredMaxLayoutWidth = 200
+        label.font = UIFont(name: "Helvetica-Bold", size: 21)
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     let eventLocationLabel: UILabel = {
-        let locationLabel = UILabel()
-        locationLabel.font = UIFont(name: "Helvetica", size: 15)
-        return locationLabel
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 15)
+     
+        return label
     }()
     
     let eventDateLabel: UILabel = {
-        let dateLabel = UILabel()
-        dateLabel.textColor = .gray
-        dateLabel.font = UIFont(name: "Helvetica", size: 15)
-        return dateLabel
-    }()
-    
-    let eventTimeLabel: UILabel = {
-        let timeLabel = UILabel()
-        timeLabel.textColor = .gray
-        timeLabel.font = UIFont(name: "Helvetica", size: 15)
-        return timeLabel
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 15)
+        return label
     }()
     
     //MARK: - View LifeCycle

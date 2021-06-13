@@ -94,17 +94,18 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.identifier, for: indexPath) as! EventTableViewCell
         cell.selectionStyle = .none
         let eventInfo = eventResults[indexPath.row]
+        let dateInfoSplit =  eventInfo.date.components(separatedBy: "T")
         
         cell.eventTitleLabel.text = eventInfo.eventTitle
-        //FIXME: - Retrieve image
-        cell.eventImageView.image = UIImage(named: "testImage.jpg")
+        cell.eventImageView.url(eventInfo.performerImages[0])
         cell.eventLocationLabel.text = "\(eventInfo.city), \(eventInfo.state)"
-        cell.eventDateLabel.text = "\(eventInfo.date)"
+        cell.eventDateLabel.text = convertDateToString(dateInfoSplit[0])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let eventDetailVC = EventsDetailViewController()
+        eventDetailVC.event = eventResults[indexPath.row]
         navigationController?.pushViewController(eventDetailVC, animated: true)
     }
     

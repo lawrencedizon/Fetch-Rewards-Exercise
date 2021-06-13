@@ -9,7 +9,7 @@ import UIKit
 import SafariServices
 
 class EventsDetailViewController: UIViewController, SFSafariViewControllerDelegate {
-    
+    var event: Event?
     //MARK: - Properties
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [headerStackView, bodyStackView, footerStackView])
@@ -101,44 +101,51 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         return imageView
     }()
 
-    let eventTitleLabel: UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.preferredMaxLayoutWidth = 220
-        titleLabel.font = UIFont(name: "Helvetica-Bold", size: 21)
-        titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        titleLabel.numberOfLines = 0
-        titleLabel.textAlignment = .center
-        titleLabel.text = "Washington Football Team at Dallas Cowboys"
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        return titleLabel
+    lazy var eventTitleLabel: UILabel = {
+        let label = UILabel()
+        label.preferredMaxLayoutWidth = 220
+        label.font = UIFont(name: "Helvetica-Bold", size: 21)
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = event?.eventTitle
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
-    let eventVenueLabel: UILabel = {
-        let locationLabel = UILabel()
-        locationLabel.font = UIFont(name: "Helvetica", size: 15)
-        locationLabel.text = "Budweiser Events Center"
-        return locationLabel
-    }()
-    
-    let eventLocationLabel: UILabel = {
-        let locationLabel = UILabel()
-        locationLabel.font = UIFont(name: "Helvetica", size: 15)
-        locationLabel.text = "LA, CA"
-        return locationLabel
+    lazy var eventVenueLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica-bold", size: 15)
+        label.text = event?.venueName
+        return label
     }()
     
-    let eventDateLabel: UILabel = {
-        let dateLabel = UILabel()
-        dateLabel.font = UIFont(name: "Helvetica", size: 15)
-        dateLabel.text = "June 11, 2021"
-        return dateLabel
+    lazy var eventLocationLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 15)
+        if let city = event?.city,
+           let state = event?.state {
+            label.text = "\(city), \(state)"
+        }
+        return label
+    }()
+    
+    lazy var eventDateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 15)
+        if let date = event?.date {
+            label.text = convertDateToString(splitDate(date: date, index: 0))
+        }
+        return label
         
     }()
     
-    let eventTimeLabel: UILabel = {
-        let timeLabel = UILabel()
-        timeLabel.text = "9:00 AM"
-        timeLabel.font = UIFont(name: "Helvetica", size: 15)
-        return timeLabel
+    lazy var eventTimeLabel: UILabel = {
+        let label = UILabel()
+        if let date = event?.date {
+            label.text = formatTimeString(time: splitDate(date: date, index: 1))
+        }
+        label.font = UIFont(name: "Helvetica", size: 15)
+        return label
     }()
     
     let likeButton: UIButton = {
@@ -169,11 +176,14 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         return label
     }()
     
-    let performersLabel: UILabel = {
+    lazy var performersLabel: UILabel = {
         let label = UILabel()
+        label.preferredMaxLayoutWidth = 220
         label.font = UIFont(name: "Helvetica", size: 15)
-        label.text = "Fort Wayne Komets, Wichita Thunder"
+        label.text = event?.performerNames.joined(separator: ", ")
         label.textAlignment = .center
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
     
@@ -198,6 +208,9 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
             constraints.append(buyTicketsButton.heightAnchor.constraint(equalToConstant: 50))
             constraints.append(buyTicketsButton.widthAnchor.constraint(equalTo: eventImageView.widthAnchor))
             
+            constraints.append(performersInfoStackView.heightAnchor.constraint(equalToConstant: 50))
+            constraints.append(performersInfoStackView.widthAnchor.constraint(equalToConstant: 220))
+            
             constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 30))
             constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 30))
             
@@ -216,9 +229,11 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
     }
 
     @objc func buyTicketsButtonPressed(){
-        let url = "https://seatgeek.com/joe-rogan-tickets/comedy/2021-06-09-8-pm/5420211"
+        guard let url = event?.ticketURL else { return }
         let safariVC = SFSafariViewController(url: URL(string: url)!)
         safariVC.delegate = self
         navigationController?.present(safariVC, animated: true)
     }
+    
+    
 }
