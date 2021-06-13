@@ -6,16 +6,47 @@
 //
 
 import UIKit
+import SafariServices
 
-class EventsDetailViewController: UIViewController {
+class EventsDetailViewController: UIViewController, SFSafariViewControllerDelegate {
     
     //MARK: - Properties
     lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [eventTitleLabel, eventImageView,eventInfoStackView])
+        let stackView = UIStackView(arrangedSubviews: [headerStackView, bodyStackView, footerStackView])
+        stackView.axis = .vertical
+        stackView.spacing = 50
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var headerStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [likeButton, eventTitleLabel])
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var bodyStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [eventImageView, eventInfoStackView, performersInfoStackView])
         stackView.axis = .vertical
         stackView.spacing = 30
         stackView.alignment = .center
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var footerStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [buyTicketsButton])
+        stackView.axis = .vertical
+        stackView.spacing = 5
+        stackView.alignment = .center
+        stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -24,7 +55,17 @@ class EventsDetailViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [ venueAndLocationStackView, dateTimeStackView])
         stackView.axis = .horizontal
         stackView.spacing = 5
-        stackView.alignment = .leading
+        stackView.alignment = .center
+        stackView.distribution = .fillProportionally
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var performersInfoStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [ performersTitleLabel, performersLabel])
+        stackView.axis = .vertical
+        stackView.spacing = 5
+        stackView.alignment = .center
         stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -48,16 +89,6 @@ class EventsDetailViewController: UIViewController {
         stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
-    }()
-    
-    let likeButton: UIButton = {
-        let button = UIButton()
-        if #available(iOS 13.0, *) {
-            button.imageView?.image = UIImage(systemName: "heart")
-        } else {
-        }
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
     }()
 
     let eventImageView: UIImageView = {
@@ -97,7 +128,6 @@ class EventsDetailViewController: UIViewController {
     
     let eventDateLabel: UILabel = {
         let dateLabel = UILabel()
-        dateLabel.textColor = .gray
         dateLabel.font = UIFont(name: "Helvetica", size: 15)
         dateLabel.text = "June 11, 2021"
         return dateLabel
@@ -106,17 +136,52 @@ class EventsDetailViewController: UIViewController {
     
     let eventTimeLabel: UILabel = {
         let timeLabel = UILabel()
-        timeLabel.textColor = .gray
         timeLabel.text = "9:00 AM"
         timeLabel.font = UIFont(name: "Helvetica", size: 15)
         return timeLabel
+    }()
+    
+    let likeButton: UIButton = {
+        let button = UIButton()
+        let buttonImage = UIImage(named: "heart.png")
+        button.setImage(buttonImage , for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    let buyTicketsButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.backgroundColor = UIColor(red: 143/255, green: 0/255, blue: 64/255, alpha: 1.0)
+        button.setTitle("Buy Tickets", for: .normal)
+        button.addTarget(self, action: #selector(buyTicketsButtonPressed), for: .allTouchEvents)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let performersTitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica-Bold", size: 18)
+        label.text = "Performers"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let performersLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Helvetica", size: 15)
+        label.text = "Fort Wayne Komets, Wichita Thunder"
+        label.textAlignment = .center
+        return label
     }()
     
     //MARK: - AutoLayout
         private func layoutConstraints(){
             var constraints = [NSLayoutConstraint]()
             constraints.append(mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
-            constraints.append(mainStackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor))
+            constraints.append(mainStackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50))
             constraints.append(mainStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor))
             
             constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 260))
@@ -127,6 +192,12 @@ class EventsDetailViewController: UIViewController {
             constraints.append(eventTitleLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 50))
             constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 220))
             
+            constraints.append(buyTicketsButton.heightAnchor.constraint(equalToConstant: 50))
+            constraints.append(buyTicketsButton.widthAnchor.constraint(equalTo: eventImageView.widthAnchor))
+            
+            constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 30))
+            constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 30))
+            
             //Activate constraints
             NSLayoutConstraint.activate(constraints)
         }
@@ -136,10 +207,15 @@ class EventsDetailViewController: UIViewController {
         print("Viewloaded")
         navigationController?.navigationBar.tintColor = .white
         view.backgroundColor = .white
-        view.addSubview(eventTitleLabel)
         view.addSubview(mainStackView)
         layoutConstraints()
         
     }
 
+    @objc func buyTicketsButtonPressed(){
+        let url = "https://seatgeek.com/joe-rogan-tickets/comedy/2021-06-09-8-pm/5420211"
+        let safariVC = SFSafariViewController(url: URL(string: url)!)
+        safariVC.delegate = self
+        navigationController?.present(safariVC, animated: true)
+    }
 }

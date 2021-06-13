@@ -47,7 +47,7 @@ class EventsViewController: UIViewController {
         
         let networkManager = NetworkManager()
         networkManager.fetch(type: .events)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             self.eventResults = networkManager.fetchedEvents
             print("eventResults count: \(self.eventResults.count)")
             DispatchQueue.main.async {
