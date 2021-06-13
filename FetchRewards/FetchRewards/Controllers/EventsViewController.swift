@@ -9,6 +9,7 @@ import UIKit
 
 ///ViewController - allows the user to search for events and display the results into a TableView
 class EventsViewController: UIViewController {
+    private var networkManager = NetworkManager()
     private var eventResults = [Event]()
     
     private lazy var searchBar: UISearchBar = {
@@ -45,10 +46,10 @@ class EventsViewController: UIViewController {
         super.loadView()
         setupUserInterface()
         
-        let networkManager = NetworkManager()
+       
         networkManager.fetch(type: .events)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            self.eventResults = networkManager.fetchedEvents
+            self.eventResults = self.networkManager.fetchedEvents
             print("eventResults count: \(self.eventResults.count)")
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -119,4 +120,28 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - SearchBar Delegates
 extension EventsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        searchBar.resignFirstResponder()
+        eventResults = self.networkManager.fetchedEvents
+        //API Network call
+        if let query = searchBar.text?.lowercased()  {
+            eventResults = eventResults.filter { $0.eventTitle.lowercased().contains(query)
+            }
+            DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+            }
+        }else{
+            print("No text was inputted into the search bar")
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        searchBar.text = nil
+        eventResults = self.networkManager.fetchedEvents
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
 }

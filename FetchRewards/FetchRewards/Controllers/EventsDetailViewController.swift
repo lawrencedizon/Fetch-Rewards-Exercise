@@ -91,12 +91,12 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         return stackView
     }()
 
-    let eventImageView: UIImageView = {
+    lazy var eventImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "testImage.jpg")
+        imageView.url(event?.performerImages[0])
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
