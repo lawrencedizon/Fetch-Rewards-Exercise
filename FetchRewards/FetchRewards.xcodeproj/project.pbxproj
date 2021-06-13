@@ -14,7 +14,7 @@
 		90BEB1B3266FE7A4006ECD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */; };
 		90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */; };
 		90BEB1B7266FE7A4006ECD93 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B6266FE7A4006ECD93 /* EventsViewController.swift */; };
-		90BEB1BD266FE7A4006ECD93 /* FetchRewards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1BB266FE7A4006ECD93 /* FetchRewards.xcdatamodeld */; };
+		90BEB1BD266FE7A4006ECD93 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */; };
 		90BEB1BF266FE7A7006ECD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */; };
 		90BEB1C2266FE7A7006ECD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */; };
 		90BEB1E9266FE950006ECD93 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1E8266FE950006ECD93 /* EventTableViewCell.swift */; };
@@ -106,7 +106,7 @@
 				90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */,
 				90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */,
 				90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */,
-				90BEB1BB266FE7A4006ECD93 /* FetchRewards.xcdatamodeld */,
+				90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */,
 				90BEB1C3266FE7A7006ECD93 /* Info.plist */,
 				90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */,
 				90BEB1E5266FE8BA006ECD93 /* Model */,
@@ -269,7 +269,7 @@
 				90BEB1ED26715D02006ECD93 /* Constants.swift in Sources */,
 				90842A012671A2640061485E /* Event.swift in Sources */,
 				90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */,
-				90BEB1BD266FE7A4006ECD93 /* FetchRewards.xcdatamodeld in Sources */,
+				90BEB1BD266FE7A4006ECD93 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,13 +524,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		90BEB1BB266FE7A4006ECD93 /* FetchRewards.xcdatamodeld */ = {
+		90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				90BEB1BC266FE7A4006ECD93 /* FetchRewards.xcdatamodel */,
 			);
 			currentVersion = 90BEB1BC266FE7A4006ECD93 /* FetchRewards.xcdatamodel */;
-			path = FetchRewards.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

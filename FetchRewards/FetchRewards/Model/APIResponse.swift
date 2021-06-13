@@ -12,10 +12,15 @@ struct EventsAPIResponse: Codable{
 }
 
 struct EventInfo: Codable {
+    let title: String?
     let datetime_utc: String?
     let venue: VenueInfo
+    let performers: [PerformerInfo]
 }
 
+struct PerformerInfo: Codable {
+    let name:  String?
+}
 struct VenueInfo: Codable {
     let name:  String?
     let city:  String?

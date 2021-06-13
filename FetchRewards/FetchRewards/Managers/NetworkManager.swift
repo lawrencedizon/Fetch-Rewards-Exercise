@@ -54,11 +54,21 @@ final class NetworkManager {
             
             if let apiResponse = try? JSONDecoder().decode(EventsAPIResponse.self, from: jsonData){
                 for item in apiResponse.events{
-                    if let city = item.venue.city,
+                    if let eventTitle = item.title,
+                       let city = item.venue.city,
                        let state = item.venue.state,
-                       let name = item.venue.name,
+                       let venue = item.venue.name,
                        let date = item.datetime_utc {
-                            self?.fetchedEvents.append(Event(city: city, state: state, name: name, date: date))
+                        
+                        print("ITEM")
+                        print(eventTitle)
+                        var performerArray = [String]()
+                        for performer in item.performers {
+                            if let performerName = performer.name {
+                                performerArray.append(performerName)
+                            }
+                        }
+                        self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performers: performerArray, date: date))
                     }else{
                         print("Failed to decode in general")
                     }

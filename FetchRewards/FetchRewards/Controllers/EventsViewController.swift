@@ -95,13 +95,11 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         let eventInfo = eventResults[indexPath.row]
         
-        cell.eventTitleLabel.text = eventInfo.name
+        cell.eventTitleLabel.text = eventInfo.eventTitle
         //FIXME: - Retrieve image
         cell.eventImageView.image = UIImage(named: "testImage.jpg")
         cell.eventLocationLabel.text = "\(eventInfo.city), \(eventInfo.state)"
         cell.eventDateLabel.text = "\(eventInfo.date)"
-        //FIXME: - Placeholder time
-        cell.eventTimeLabel.text = "Placeholder time"
         return cell
     }
     

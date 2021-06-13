@@ -8,16 +8,20 @@
 import Foundation
 
 struct Event {
+    let eventTitle: String
     let city: String
     let state: String
-    let name: String
+    let venueName: String
     let date: String
+    let performers: [String]
     
-    init(city: String, state: String, name: String, date: String){
+    init(eventTitle: String, city: String, state: String, venueName: String, performers: [String], date: String){
+        self.eventTitle = eventTitle
         self.city = city
         self.state = state
-        self.name = name
+        self.venueName = venueName
         self.date = date
+        self.performers = performers
     }
     
 }
