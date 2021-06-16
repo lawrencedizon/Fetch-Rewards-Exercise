@@ -268,7 +268,6 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
     //MARK: - AutoLayout
             private func layoutConstraints(){
                 var constraints = [NSLayoutConstraint]()
-                //FIXME:- Constraints needs rework
                 constraints.append(mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
                 constraints.append(mainStackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30))
                 constraints.append(mainStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor))

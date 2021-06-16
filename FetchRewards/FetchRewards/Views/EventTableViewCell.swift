@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// - CustomTableViewCell manages the EventViewController's TableView cell
+/// - EventTableViewCell manages the EventViewController's TableView cell
 class EventTableViewCell: UITableViewCell {
     static let identifier: String = "EventTableViewCell"
     
