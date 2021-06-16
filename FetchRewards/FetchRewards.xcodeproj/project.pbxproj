@@ -16,7 +16,6 @@
 		90BEB1B3266FE7A4006ECD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */; };
 		90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */; };
 		90BEB1B7266FE7A4006ECD93 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1B6266FE7A4006ECD93 /* EventsViewController.swift */; };
-		90BEB1BD266FE7A4006ECD93 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */; };
 		90BEB1BF266FE7A7006ECD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */; };
 		90BEB1C2266FE7A7006ECD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */; };
 		90BEB1E9266FE950006ECD93 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BEB1E8266FE950006ECD93 /* EventTableViewCell.swift */; };
@@ -48,7 +47,6 @@
 		90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		90BEB1B6266FE7A4006ECD93 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		90BEB1BC266FE7A4006ECD93 /* FetchRewards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetchRewards.xcdatamodel; sourceTree = "<group>"; };
 		90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90BEB1C1266FE7A7006ECD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90BEB1C3266FE7A7006ECD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				90BEB1B2266FE7A4006ECD93 /* AppDelegate.swift */,
 				90BEB1B4266FE7A4006ECD93 /* SceneDelegate.swift */,
 				90BEB1C0266FE7A7006ECD93 /* LaunchScreen.storyboard */,
-				90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */,
 				90BEB1C3266FE7A7006ECD93 /* Info.plist */,
 				90BEB1BE266FE7A7006ECD93 /* Assets.xcassets */,
 				90BEB1E5266FE8BA006ECD93 /* Model */,
@@ -285,7 +282,6 @@
 				90842A012671A2640061485E /* Event.swift in Sources */,
 				90BEB1B5266FE7A4006ECD93 /* SceneDelegate.swift in Sources */,
 				901E6DBF2676859900946C32 /* Extensions.swift in Sources */,
-				90BEB1BD266FE7A4006ECD93 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -500,6 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lawrencedizon.FetchRewards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -538,19 +536,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		90BEB1BB266FE7A4006ECD93 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				90BEB1BC266FE7A4006ECD93 /* FetchRewards.xcdatamodel */,
-			);
-			currentVersion = 90BEB1BC266FE7A4006ECD93 /* FetchRewards.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 90BEB1A7266FE7A3006ECD93 /* Project object */;
 }

@@ -45,7 +45,7 @@ class EventsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setupUserInterface()
-        
+        let defaults = UserDefaults.standard
        
         networkManager.fetch(type: .events)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
@@ -70,6 +70,8 @@ class EventsViewController: UIViewController {
         navigationItem.titleView = searchBar
         layoutConstraints()
     }
+    
+    
 //MARK: - AutoLayout
     private func layoutConstraints(){
         var constraints = [NSLayoutConstraint]()
@@ -83,6 +85,9 @@ class EventsViewController: UIViewController {
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
     }
+    
+  
+    
 }
 
 //MARK: - TableView Delegates
@@ -93,6 +98,7 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.identifier, for: indexPath) as! EventTableViewCell
+        cell.likeButton.addTarget(self, action: #selector(likeButtonPressed(sender:)), for: .touchUpInside)
         cell.selectionStyle = .none
         let eventInfo = eventResults[indexPath.row]
         let dateInfoSplit =  eventInfo.date.components(separatedBy: "T")
@@ -113,6 +119,12 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
+    }
+    
+    //MARK: - Functions
+    @objc func likeButtonPressed(sender: UIButton){
+        sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        print("Button pressed")
     }
     
     
@@ -145,3 +157,5 @@ extension EventsViewController: UISearchBarDelegate {
     }
     
 }
+
+

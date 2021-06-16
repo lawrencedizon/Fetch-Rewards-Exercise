@@ -73,7 +73,7 @@ final class NetworkManager {
                         
                         }
                         
-                        self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performerNames: performerNamesArray,  date: date, performerImages: performerImagesArray, ticketURL: ticketURL))
+                        self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performerNames: performerNamesArray,  date: date, performerImages: performerImagesArray, ticketURL: ticketURL, isFavorite: false))
                     }else{
                         print("Failed to decode in general")
                     }

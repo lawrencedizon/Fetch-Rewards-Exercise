@@ -5,9 +5,9 @@
 //  Created by Lawrence Dizon on 6/9/21.
 //
 
-import Foundation
+import UIKit
 
-struct Event {
+class Event: NSObject {
     let eventTitle: String
     let city: String
     let state: String
@@ -16,9 +16,10 @@ struct Event {
     let performerNames: [String]
     let performerImages: [String]
     let ticketURL: String
+    let isFavorite: Bool
     
     
-    init(eventTitle: String, city: String, state: String, venueName: String, performerNames: [String], date: String, performerImages: [String], ticketURL: String){
+    init(eventTitle: String, city: String, state: String, venueName: String, performerNames: [String], date: String, performerImages: [String], ticketURL: String, isFavorite: Bool){
         self.eventTitle = eventTitle
         self.city = city
         self.state = state
@@ -27,6 +28,7 @@ struct Event {
         self.performerNames = performerNames
         self.performerImages = performerImages
         self.ticketURL = ticketURL
+        self.isFavorite = isFavorite
     }
     
 }

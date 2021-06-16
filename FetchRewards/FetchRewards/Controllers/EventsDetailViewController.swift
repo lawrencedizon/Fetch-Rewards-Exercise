@@ -153,6 +153,7 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         let buttonImage = UIImage(named: "heart.png")
         button.setImage(buttonImage , for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(likeButtonPressed(sender:)), for: .touchUpInside)
         
         return button
     }()
@@ -227,13 +228,21 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         layoutConstraints()
         
     }
-
+    
+    //MARK: - Functions
     @objc func buyTicketsButtonPressed(){
         guard let url = event?.ticketURL else { return }
         let safariVC = SFSafariViewController(url: URL(string: url)!)
         safariVC.delegate = self
         navigationController?.present(safariVC, animated: true)
     }
+    
+    
+    @objc func likeButtonPressed(sender: UIButton){
+        sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        print("Button pressed")
+    }
+    
     
     
 }

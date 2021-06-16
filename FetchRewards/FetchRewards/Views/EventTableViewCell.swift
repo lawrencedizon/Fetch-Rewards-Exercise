@@ -12,21 +12,32 @@ class EventTableViewCell: UITableViewCell {
     static let identifier: String = "EventTableViewCell"
     
     //MARK: - Properties
+    
+    lazy var mainStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [eventImageView, eventLabelsStackView])
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     lazy var eventLabelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [eventTitleLabel, eventLocationAndDateStackView])
         stackView.axis = .vertical
-        stackView.spacing = 5
-        stackView.alignment = .leading
+        stackView.spacing = 10
+        stackView.alignment = .center
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
     lazy var eventLocationAndDateStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [eventLocationLabel, eventDateLabel])
+        let stackView = UIStackView(arrangedSubviews: [eventLocationLabel, eventDateLabel, likeButton])
         stackView.axis = .vertical
         stackView.spacing = 5
-        stackView.alignment = .leading
+        stackView.alignment = .center
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -43,6 +54,7 @@ class EventTableViewCell: UITableViewCell {
     
     let eventTitleLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.preferredMaxLayoutWidth = 200
         label.font = UIFont(name: "Helvetica-Bold", size: 21)
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -64,12 +76,20 @@ class EventTableViewCell: UITableViewCell {
         return label
     }()
     
+    let likeButton: UIButton = {
+        let button = UIButton()
+        let buttonImage = UIImage(named: "heart.png")
+        button.setImage(buttonImage , for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+  
     //MARK: - View LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         clipsToBounds = true
-        contentView.addSubview(eventImageView)
-        contentView.addSubview(eventLabelsStackView)
+        contentView.addSubview(mainStackView)
         layoutConstraints()
     }
     
@@ -81,20 +101,22 @@ class EventTableViewCell: UITableViewCell {
     private func layoutConstraints(){
         var constraints = [NSLayoutConstraint]()
         
-        //eventImageView
-        constraints.append(eventImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 45 ))
-        constraints.append(eventImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 45))
-        constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 100))
-        constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 100))
+        constraints.append(mainStackView.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor, constant: 30))
+        constraints.append(mainStackView.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor))
         
-        //eventLabels StackView
-        constraints.append(eventLabelsStackView.leftAnchor.constraint(equalTo: eventImageView.rightAnchor, constant: 20))
-        constraints.append(eventLocationLabel.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor))
-        constraints.append(eventLabelsStackView.topAnchor.constraint(equalTo: eventImageView.topAnchor))
+        constraints.append(mainStackView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor))
+        constraints.append(mainStackView.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor))
+      
+        constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 125))
+        constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 125))
         
-        constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 200))
+        
+        constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 20))
+        constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 20))
         
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
     }
+   
+   
 }

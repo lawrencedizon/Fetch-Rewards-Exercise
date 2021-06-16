@@ -23,7 +23,7 @@ func convertDateToString(_ date: String) -> String{
     let date = dateFormatter.date(from: date)
     
     let formattedDisplayDate = DateFormatter()
-    formattedDisplayDate.dateFormat = "MMM d yyyy"
+    formattedDisplayDate.dateFormat = "MMM d, yyyy"
     
     guard let safeDate = date else { return "" }
     return formattedDisplayDate.string(from: safeDate)
