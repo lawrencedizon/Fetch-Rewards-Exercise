@@ -8,9 +8,11 @@
 import UIKit
 import SafariServices
 
+/// - EventsDetailViewController shows more information about the selected event
 class EventsDetailViewController: UIViewController, SFSafariViewControllerDelegate {
+//MARK: - Properties
     var event: Event?
-    //MARK: - Properties
+
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [headerStackView, bodyStackView, footerStackView])
         stackView.axis = .vertical
@@ -116,6 +118,9 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         let label = UILabel()
         label.font = UIFont(name: "Helvetica-bold", size: 15)
         label.text = event?.venueName
+        label.preferredMaxLayoutWidth = 200
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
     
@@ -136,7 +141,6 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
             label.text = convertDateToString(splitDate(date: date, index: 0))
         }
         return label
-        
     }()
     
     lazy var eventTimeLabel: UILabel = {
@@ -154,7 +158,6 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         button.setImage(buttonImage , for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(likeButtonPressed(sender:)), for: .touchUpInside)
-        
         return button
     }()
     
@@ -181,47 +184,22 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         let label = UILabel()
         label.preferredMaxLayoutWidth = 220
         label.font = UIFont(name: "Helvetica", size: 15)
-        label.text = event?.performerNames.joined(separator: ", ")
+        label.text = event?.performerNames[0]
         label.textAlignment = .center
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.numberOfLines = 0
         return label
     }()
     
-    //MARK: - AutoLayout
-        private func layoutConstraints(){
-            var constraints = [NSLayoutConstraint]()
-            //FIXME:- Constraints needs rework
-            constraints.append(mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
-            constraints.append(mainStackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50))
-            
-            constraints.append(headerStackView.leftAnchor.constraint(equalTo: mainStackView.leftAnchor))
-            constraints.append(mainStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor))
-            
-            constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 260))
-            constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 320))
-            
-            constraints.append(dateTimeStackView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor))
-     
-            constraints.append(eventTitleLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 50))
-            constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 220))
-            
-            constraints.append(buyTicketsButton.heightAnchor.constraint(equalToConstant: 50))
-            constraints.append(buyTicketsButton.widthAnchor.constraint(equalTo: eventImageView.widthAnchor))
-            
-            constraints.append(performersInfoStackView.heightAnchor.constraint(equalToConstant: 50))
-            constraints.append(performersInfoStackView.widthAnchor.constraint(equalToConstant: 220))
-            
-            constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 30))
-            constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 30))
-            
-            //Activate constraints
-            NSLayoutConstraint.activate(constraints)
-        }
-    
+
+//MARK: - ViewController Lifecycle
     override func loadView() {
         super.loadView()
-        print("Viewloaded")
+        configureView()
+    }
+    
+//MARK: - Functions
+    func configureView(){
         navigationController?.navigationBar.tintColor = .white
         view.backgroundColor = .white
         view.addSubview(mainStackView)
@@ -229,18 +207,19 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         layoutConstraints()
     }
     
-    func checkIfFavorite(){
-        if event?.isFavorite == true {
-            likeButton.setImage(UIImage(named: "heart_fill.png"), for: .normal)
-        }
-    }
-    
-    //MARK: - Functions
     @objc func buyTicketsButtonPressed(){
         guard let url = event?.ticketURL else { return }
         let safariVC = SFSafariViewController(url: URL(string: url)!)
         safariVC.delegate = self
         navigationController?.present(safariVC, animated: true)
+    }
+    
+    func checkIfFavorite(){
+        if event?.isFavorite == true {
+            likeButton.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        }else{
+            likeButton.setImage(UIImage(named: "heart.png"), for: .normal)
+        }
     }
     
     func favoriteButtonPressed(eventInfo: Event){
@@ -255,7 +234,6 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
                 if let encodedFavorites = try? encoder.encode(favorites) {
                 userDefaults.set(encodedFavorites, forKey: Constants.favorites)
                 }
-            
             }else{
                 //no favorites in userdefaults yet
                 let favorites = [event]
@@ -263,7 +241,6 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
                     userDefaults.set(encodedFavorites, forKey: Constants.favorites)
                 }
             }
-            
         }else{
             event.isFavorite = false
             if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
@@ -275,26 +252,44 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
                 }
             }
         }
-        
     }
-    
     
     @objc func likeButtonPressed(sender: UIButton){
         if let event = self.event {
-            print("BEFORE")
-            print(event.isFavorite)
             favoriteButtonPressed(eventInfo: event)
             if event.isFavorite {
-                print("AFTER- is Favorite")
-                print(event.isFavorite)
                 sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
             }else{
-                print("AFTER- is not Favorite")
-                print(event.isFavorite)
                 sender.setImage(UIImage(named: "heart.png"), for: .normal)
             }
         }
-      
     }
-
+    
+    //MARK: - AutoLayout
+            private func layoutConstraints(){
+                var constraints = [NSLayoutConstraint]()
+                //FIXME:- Constraints needs rework
+                constraints.append(mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20))
+                constraints.append(mainStackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30))
+                constraints.append(mainStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor))
+                
+                constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 220))
+                constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 320))
+                
+                constraints.append(dateTimeStackView.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor))
+         
+                constraints.append(eventTitleLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 50))
+                constraints.append(eventTitleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 230))
+                
+                constraints.append(buyTicketsButton.heightAnchor.constraint(equalToConstant: 40))
+                constraints.append(buyTicketsButton.widthAnchor.constraint(equalTo: eventImageView.widthAnchor))
+                constraints.append(performersInfoStackView.heightAnchor.constraint(equalToConstant: 60))
+                constraints.append(performersInfoStackView.widthAnchor.constraint(lessThanOrEqualToConstant: 220))
+                
+                constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 30))
+                constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 30))
+                
+                //Activate constraints
+                NSLayoutConstraint.activate(constraints)
+            }
 }

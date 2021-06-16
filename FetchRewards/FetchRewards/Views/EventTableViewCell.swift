@@ -7,12 +7,11 @@
 
 import UIKit
 
-/// - CustomTableViewCell manages the ViewController's tableView cell
+/// - CustomTableViewCell manages the EventViewController's TableView cell
 class EventTableViewCell: UITableViewCell {
     static let identifier: String = "EventTableViewCell"
     
-    //MARK: - Properties
-    
+//MARK: - Properties
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [eventImageView, eventLabelsStackView])
         stackView.axis = .horizontal
@@ -84,8 +83,7 @@ class EventTableViewCell: UITableViewCell {
         return button
     }()
     
-  
-    //MARK: - View LifeCycle
+//MARK: - View LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         clipsToBounds = true
@@ -97,7 +95,7 @@ class EventTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - AutoLayout
+//MARK: - AutoLayout
     private func layoutConstraints(){
         var constraints = [NSLayoutConstraint]()
         
@@ -110,13 +108,10 @@ class EventTableViewCell: UITableViewCell {
         constraints.append(eventImageView.heightAnchor.constraint(equalToConstant: 125))
         constraints.append(eventImageView.widthAnchor.constraint(equalToConstant: 125))
         
-        
         constraints.append(likeButton.heightAnchor.constraint(equalToConstant: 20))
         constraints.append(likeButton.widthAnchor.constraint(equalToConstant: 20))
         
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
     }
-   
-   
 }

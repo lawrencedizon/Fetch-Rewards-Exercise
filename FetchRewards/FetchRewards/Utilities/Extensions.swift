@@ -7,7 +7,7 @@
 
 import UIKit
 
-//MARK: - Download images and cache Extension
+//MARK: - Download images asynchronously
 extension UIImageView {
     func url(_ url: String?) {
         DispatchQueue.global().async { [weak self] in

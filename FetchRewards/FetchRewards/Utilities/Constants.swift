@@ -9,10 +9,9 @@ import Foundation
 
 struct Constants {
     //Place your client_id or Secret from the SeatGeekAPI here
-    static let CLIENT_ID = ""
+    static let CLIENT_ID = "MjIxNzQzNzJ8MTYyMzI3MTAyOC42NTA4NDMx"
     static let SECRET = ""
     static let favorites = "favorites"
-    
 }
 
 enum SearchTypes {
@@ -25,5 +24,8 @@ struct SeatGeekEndPoints{
     static let performers = "/performers"
     static let venues = "/venues"
 }
+
+
+
 
 

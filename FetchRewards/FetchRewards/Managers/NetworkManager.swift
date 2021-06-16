@@ -24,8 +24,6 @@ final class NetworkManager {
             case .venues:
                 url += "\(SeatGeekEndPoints.venues)?client_id=\(Constants.CLIENT_ID)"
         }
-        print("Network call")
-        print(url + "\n")
         
         guard let fetchURL = URL(string: url) else { return }
         
@@ -53,6 +51,7 @@ final class NetworkManager {
             }
             
             if let apiResponse = try? JSONDecoder().decode(EventsAPIResponse.self, from: jsonData){
+                
                 for item in apiResponse.events{
                     if let eventTitle = item.short_title,
                        let city = item.venue.city,
@@ -61,26 +60,24 @@ final class NetworkManager {
                        let date = item.datetime_utc,
                        let ticketURL = item.url{
                         
-                        var performerNamesArray = [String]()
-                        var performerImagesArray = [String]()
-                        for performer in item.performers {
-                            if let performerName = performer.name,
-                               let performerImage = performer.image{
-                                performerNamesArray.append(performerName)
-                                performerImagesArray.append(performerImage)
-                               
-                            }
-                        
+                    var performerNamesArray = [String]()
+                    var performerImagesArray = [String]()
+                    for performer in item.performers {
+                        if let performerName = performer.name,
+                           let performerImage = performer.image{
+                            performerNamesArray.append(performerName)
+                            performerImagesArray.append(performerImage)
                         }
-                        
+                    }
                         self?.fetchedEvents.append(Event(eventTitle: eventTitle, city: city, state: state, venueName: venue, performerNames: performerNamesArray,  date: date, performerImages: performerImagesArray, ticketURL: ticketURL, isFavorite: false))
                     }else{
-                        print("Failed to decode in general")
+                        print("APIRespose has missing data")
                     }
                 }
             }else{
                 print("Failed to decode json data")
             }
+            
         })
         task.resume()
     }

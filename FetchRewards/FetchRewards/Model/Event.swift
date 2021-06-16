@@ -18,7 +18,6 @@ class Event: NSObject, Codable{
     let ticketURL: String
     var isFavorite: Bool
     
-    
     init(eventTitle: String, city: String, state: String, venueName: String, performerNames: [String], date: String, performerImages: [String], ticketURL: String, isFavorite: Bool){
         self.eventTitle = eventTitle
         self.city = city
@@ -30,6 +29,5 @@ class Event: NSObject, Codable{
         self.ticketURL = ticketURL
         self.isFavorite = isFavorite
     }
-    
 }
 
