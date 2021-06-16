@@ -14,6 +14,14 @@
 - You can favorite an event and it will persist even when exiting the application
 - You can check out or purchase tickets directly from SeatGeek
 
+## Technologies
+
+- UIKIt (Programmatic)
+- AutoLayout
+- URLSession
+- UserDefaults
+- SafariServices
+
 ## Instructions
 Clone the project to your preferred location
 
