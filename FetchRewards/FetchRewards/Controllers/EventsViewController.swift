@@ -45,16 +45,23 @@ class EventsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setupUserInterface()
-        let defaults = UserDefaults.standard
-       
+        
         networkManager.fetch(type: .events)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             self.eventResults = self.networkManager.fetchedEvents
             print("eventResults count: \(self.eventResults.count)")
+            
+            self.retrieveFavoriteEvents()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        retrieveFavoriteEvents()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,7 +78,6 @@ class EventsViewController: UIViewController {
         layoutConstraints()
     }
     
-    
 //MARK: - AutoLayout
     private func layoutConstraints(){
         var constraints = [NSLayoutConstraint]()
@@ -85,9 +91,6 @@ class EventsViewController: UIViewController {
         //Activate constraints
         NSLayoutConstraint.activate(constraints)
     }
-    
-  
-    
 }
 
 //MARK: - TableView Delegates
@@ -100,9 +103,14 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.identifier, for: indexPath) as! EventTableViewCell
         cell.likeButton.addTarget(self, action: #selector(likeButtonPressed(sender:)), for: .touchUpInside)
         cell.selectionStyle = .none
+        cell.likeButton.tag = indexPath.row
         let eventInfo = eventResults[indexPath.row]
         let dateInfoSplit =  eventInfo.date.components(separatedBy: "T")
-        
+        if eventInfo.isFavorite {
+            cell.likeButton.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        }else{
+            cell.likeButton.setImage(UIImage(named: "heart.png"), for: .normal)
+        }
         cell.eventTitleLabel.text = eventInfo.eventTitle
         cell.eventImageView.url(eventInfo.performerImages[0])
         cell.eventLocationLabel.text = "\(eventInfo.city), \(eventInfo.state)"
@@ -116,18 +124,65 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(eventDetailVC, animated: true)
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         200
     }
     
+    func favoriteButtonPressed(index: Int){
+        let event = eventResults[index]
+        if !event.isFavorite {
+            //favoriting a song
+            event.isFavorite = true
+            if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
+                var favorites = try? decoder.decode([Event].self, from: storedFavorites){
+                favorites.append(event)
+                
+                if let encodedFavorites = try? encoder.encode(favorites) {
+                userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            
+            }else{
+                //no favorites in userdefaults yet
+                let favorites = [event]
+                if let encodedFavorites = try? encoder.encode(favorites){
+                    userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            }
+            
+        }else{
+            event.isFavorite = false
+            if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
+               var favorites = try? decoder.decode([Event].self, from: storedFavorites){
+                favorites.removeAll(where: { $0.eventTitle == event.eventTitle})
+                
+                if let encodedFavorites = try? encoder.encode(favorites){
+                    userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            }
+        }
+        tableView.reloadData()
+    }
     //MARK: - Functions
-    @objc func likeButtonPressed(sender: UIButton){
-        sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
-        print("Button pressed")
+    @objc func likeButtonPressed(sender: AnyObject){
+        favoriteButtonPressed(index: sender.tag)
+        if eventResults[sender.tag].isFavorite {
+            sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        }else{
+            sender.setImage(UIImage(named: "heart.png"), for: .normal)
+        }
     }
     
-    
+    func retrieveFavoriteEvents(){
+        if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
+           let favorites = try? decoder.decode([Event].self, from: storedFavorites){
+            for event in self.eventResults {
+                if favorites.contains(where: { $0.eventTitle == event.eventTitle}){
+                    event.isFavorite = true
+                }
+            }
+        }
+        tableView.reloadData()
+    }
 }
 
 //MARK: - SearchBar Delegates

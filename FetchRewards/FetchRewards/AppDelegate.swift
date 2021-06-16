@@ -8,6 +8,10 @@
 import UIKit
 import CoreData
 
+let userDefaults = UserDefaults.standard
+
+let encoder = JSONEncoder()
+let decoder = JSONDecoder()
 
 @main
 
@@ -20,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UINavigationBar.appearance().barTintColor = UIColor(red: 143/255, green: 0/255, blue: 64/255, alpha: 1.0)
+        
+        userDefaults.register(defaults: [Constants.favorites: [Data]()
+        ])
         return true
     }
 

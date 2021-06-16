@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Event: NSObject {
+class Event: NSObject, Codable{
     let eventTitle: String
     let city: String
     let state: String
@@ -16,7 +16,7 @@ class Event: NSObject {
     let performerNames: [String]
     let performerImages: [String]
     let ticketURL: String
-    let isFavorite: Bool
+    var isFavorite: Bool
     
     
     init(eventTitle: String, city: String, state: String, venueName: String, performerNames: [String], date: String, performerImages: [String], ticketURL: String, isFavorite: Bool){

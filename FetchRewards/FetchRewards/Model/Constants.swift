@@ -11,6 +11,7 @@ struct Constants {
     //Place your client_id or Secret from the SeatGeekAPI here
     static let CLIENT_ID = ""
     static let SECRET = ""
+    static let favorites = "favorites"
     
 }
 
@@ -24,3 +25,5 @@ struct SeatGeekEndPoints{
     static let performers = "/performers"
     static let venues = "/venues"
 }
+
+

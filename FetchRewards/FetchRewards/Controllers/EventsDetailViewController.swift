@@ -225,8 +225,14 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         navigationController?.navigationBar.tintColor = .white
         view.backgroundColor = .white
         view.addSubview(mainStackView)
+        checkIfFavorite()
         layoutConstraints()
-        
+    }
+    
+    func checkIfFavorite(){
+        if event?.isFavorite == true {
+            likeButton.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+        }
     }
     
     //MARK: - Functions
@@ -237,12 +243,58 @@ class EventsDetailViewController: UIViewController, SFSafariViewControllerDelega
         navigationController?.present(safariVC, animated: true)
     }
     
-    
-    @objc func likeButtonPressed(sender: UIButton){
-        sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
-        print("Button pressed")
+    func favoriteButtonPressed(eventInfo: Event){
+        let event = eventInfo
+        if !event.isFavorite {
+            //favoriting a song
+            event.isFavorite = true
+            if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
+                var favorites = try? decoder.decode([Event].self, from: storedFavorites){
+                favorites.append(event)
+                
+                if let encodedFavorites = try? encoder.encode(favorites) {
+                userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            
+            }else{
+                //no favorites in userdefaults yet
+                let favorites = [event]
+                if let encodedFavorites = try? encoder.encode(favorites){
+                    userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            }
+            
+        }else{
+            event.isFavorite = false
+            if let storedFavorites = userDefaults.data(forKey: Constants.favorites),
+               var favorites = try? decoder.decode([Event].self, from: storedFavorites){
+                favorites.removeAll(where: { $0.eventTitle == event.eventTitle})
+                
+                if let encodedFavorites = try? encoder.encode(favorites){
+                    userDefaults.set(encodedFavorites, forKey: Constants.favorites)
+                }
+            }
+        }
+        
     }
     
     
-    
+    @objc func likeButtonPressed(sender: UIButton){
+        if let event = self.event {
+            print("BEFORE")
+            print(event.isFavorite)
+            favoriteButtonPressed(eventInfo: event)
+            if event.isFavorite {
+                print("AFTER- is Favorite")
+                print(event.isFavorite)
+                sender.setImage(UIImage(named: "heart_fill.png"), for: .normal)
+            }else{
+                print("AFTER- is not Favorite")
+                print(event.isFavorite)
+                sender.setImage(UIImage(named: "heart.png"), for: .normal)
+            }
+        }
+      
+    }
+
 }
